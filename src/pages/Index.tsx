@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Perfil from "@/components/Perfil";
 import Logros from "@/components/Logros";
 import Valores from "@/components/Valores";
+import Aptitudes from "@/components/Aptitudes";
 import Galeria from "@/components/Galeria";
 import Patrocinio from "@/components/Patrocinio";
 import Contacto from "@/components/Contacto";
@@ -21,6 +22,7 @@ export default function Index() {
         <Perfil />
         <Logros />
         <Valores />
+        <Aptitudes />
         <Galeria />
         <Patrocinio />
         <Contacto />
