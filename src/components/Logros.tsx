@@ -31,7 +31,7 @@ export default function Logros() {
         <div className="flex flex-col items-center justify-center">
           <div className="relative group">
             <img
-              src="/images/emyngskate.jpeg"
+              src="/images/emynskate.jpeg"
               alt="emynskate"
               className="rounded-xl shadow-lg border-2 border-[#a78bfa] object-cover"
               style={{ maxWidth: "100%", height: "auto" }}
