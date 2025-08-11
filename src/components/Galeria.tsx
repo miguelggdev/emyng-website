@@ -2,15 +2,15 @@ import { Image } from "lucide-react";
 
 const galleryImages = [
   {
-    src: "/emilyfr2.jpeg",
+    src: "/images/emilyfr2.jpeg",
     alt: "Emily en competencia internacional",
   },
   {
-    src: "/1.jpg",
+    src: "/images/1.jpg",
     alt: "Competencias 2024 - Patinaje de Velocidad",
   },
   {
-    src: "/2.jpg",
+    src: "/images/2.jpg",
     alt: "Resultados de competencias 2024",
   },
 ];

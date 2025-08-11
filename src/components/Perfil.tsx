@@ -7,7 +7,7 @@ export default function Perfil() {
       {/* Foto circular */}
       <div className="flex-shrink-0">
         <img
-          src="https://randomuser.me/api/portraits/teen/woman/1.jpg"
+          src="/images/emilyfr2.jpeg"
           alt="Emily Nicolle González Muñoz"
           className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-[#a78bfa] shadow-2xl object-cover"
         />
