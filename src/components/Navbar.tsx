@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Menu, X, Instagram, Youtube, Facebook, Mail, Search, Tiktok } from "lucide-react";
+import { Menu, X, Instagram, Youtube, Facebook, Mail, Search } from "lucide-react";
+import { TiktokIcon } from "@/components/icons/TiktokIcon";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -16,7 +17,7 @@ const socialLinks = [
   { icon: Instagram, href: "https://instagram.com/", label: "Instagram" },
   { icon: Youtube, href: "https://youtube.com/", label: "YouTube" },
   { icon: Facebook, href: "https://facebook.com/", label: "Facebook" },
-  { icon: Tiktok, href: "https://tiktok.com/", label: "TikTok" },
+  { icon: TiktokIcon, href: "https://tiktok.com/", label: "TikTok" },
   { icon: Mail, href: "mailto:emily@email.com", label: "Email" },
 ];
 
