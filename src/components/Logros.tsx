@@ -29,8 +29,16 @@ export default function Logros() {
           </ul>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <div className="w-full h-56 bg-white/10 rounded-xl flex items-center justify-center border-2 border-dashed border-[#a78bfa]">
-            <span className="text-white/60">Espacio para fotografía de logros</span>
+          <div className="relative group">
+            <img
+              src="/images/emyngskate.jpeg"
+              alt="emynskate"
+              className="rounded-xl shadow-lg border-2 border-[#a78bfa] object-cover"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+            <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-xl">
+              <span className="text-white text-xl font-semibold">emynskate</span>
+            </div>
           </div>
         </div>
       </div>
