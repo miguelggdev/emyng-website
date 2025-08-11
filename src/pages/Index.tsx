@@ -8,13 +8,15 @@ import Galeria from "@/components/Galeria";
 import Patrocinio from "@/components/Patrocinio";
 import Contacto from "@/components/Contacto";
 import { MadeWithDyad } from "@/components/made-with-dyad";
+import AnimatedGradientBackground from "@/components/AnimatedGradientBackground";
 
 export default function Index() {
   return (
-    <div className="bg-black min-h-screen font-sans">
+    <div className="bg-black min-h-screen font-sans relative overflow-x-hidden">
+      <AnimatedGradientBackground />
       <Navbar />
       <SidebarSocial />
-      <main className="pt-20">
+      <main className="pt-20 relative z-10">
         <Hero />
         <Perfil />
         <Logros />
@@ -23,7 +25,7 @@ export default function Index() {
         <Patrocinio />
         <Contacto />
       </main>
-      <footer>
+      <footer className="relative z-10">
         <MadeWithDyad />
       </footer>
     </div>
