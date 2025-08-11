@@ -32,13 +32,14 @@ export default function Galeria() {
         <Image className="text-blue-400" size={32} />
         Galería
       </h2>
-      <div className="relative w-full overflow-hidden rounded-xl shadow-lg bg-white/10">
+      <div className="relative w-full rounded-xl shadow-lg bg-white/10 overflow-hidden" style={{ minHeight: "18rem" }}>
         {/* Slides */}
         {galleryImages.map((img, idx) => (
           <div
             key={img.src}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"}`}
+            className={`transition-opacity duration-700 ease-in-out absolute inset-0 flex flex-col ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"}`}
             aria-hidden={idx !== current}
+            style={{ minHeight: "18rem" }}
           >
             <img
               src={img.src}
