@@ -23,9 +23,10 @@ export default function Hero() {
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 py-24">
         {/* Foto circular */}
         <img
-          src="/images/emilyfr2.jpeg"
+          src="/images/20250509_083812.jpg"
           alt="Emily Nicolle González Muñoz"
-          className="w-40 h-40 rounded-full border-4 border-[#a78bfa] shadow-xl object-cover mb-6"
+          className="w-40 h-40 rounded-full border-4 border-[#a78bfa] shadow-xl object-cover mb-6 object-top"
+          style={{ objectPosition: "top center" }}
         />
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-2 drop-shadow-lg">
           Emily Nicolle González Muñoz

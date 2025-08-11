@@ -7,9 +7,10 @@ export default function Perfil() {
       {/* Foto circular */}
       <div className="flex-shrink-0">
         <img
-          src="/images/emilyfr2.jpeg"
+          src="/images/20250509_083812.jpg"
           alt="Emily Nicolle González Muñoz"
-          className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-[#a78bfa] shadow-2xl object-cover"
+          className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-[#a78bfa] shadow-2xl object-cover object-top"
+          style={{ objectPosition: "top center" }}
         />
       </div>
       {/* Texto */}
