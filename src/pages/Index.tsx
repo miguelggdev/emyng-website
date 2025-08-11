@@ -10,6 +10,7 @@ import Patrocinio from "@/components/Patrocinio";
 import Contacto from "@/components/Contacto";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import AnimatedGradientBackground from "@/components/AnimatedGradientBackground";
+import CardsDemo from "@/components/CardsDemo";
 
 export default function Index() {
   return (
@@ -21,6 +22,7 @@ export default function Index() {
         <Hero />
         <Perfil />
         <Logros />
+        <CardsDemo />
         <Valores />
         <Aptitudes />
         <Galeria />
