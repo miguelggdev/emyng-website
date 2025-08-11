@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Instagram, Youtube, Facebook, Mail, Search } from "lucide-react";
 import { TiktokIcon } from "@/components/icons/TiktokIcon";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -62,6 +63,9 @@ export default function Navbar() {
           <button className="ml-2 text-white/60 hover:text-[#8b5cf6] transition-colors">
             <Search size={20} />
           </button>
+          <div className="ml-2">
+            <ThemeToggle />
+          </div>
         </div>
         {/* Mobile menu button */}
         <button
@@ -103,6 +107,7 @@ export default function Navbar() {
                 <s.icon size={28} />
               </a>
             ))}
+            <ThemeToggle />
           </div>
         </div>
       </div>
