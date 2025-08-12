@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import SidebarSocial from "@/components/SidebarSocial";
 import Hero from "@/components/Hero";
 import Perfil from "@/components/Perfil";
+import MiCamino from "@/components/MiCamino";
 import Logros from "@/components/Logros";
 import Valores from "@/components/Valores";
 import Aptitudes from "@/components/Aptitudes";
@@ -22,6 +23,7 @@ export default function Index() {
       <main className="pt-20 relative z-10">
         <Hero />
         <Perfil />
+        <MiCamino />
         <Logros />
         <CardsDemo />
         <Valores />
