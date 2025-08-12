@@ -8,6 +8,7 @@ import Aptitudes from "@/components/Aptitudes";
 import Galeria from "@/components/Galeria";
 import Patrocinio from "@/components/Patrocinio";
 import Contacto from "@/components/Contacto";
+import Donaciones from "@/components/Donaciones";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import AnimatedGradientBackground from "@/components/AnimatedGradientBackground";
 import CardsDemo from "@/components/CardsDemo";
@@ -27,6 +28,7 @@ export default function Index() {
         <Aptitudes />
         <Galeria />
         <Patrocinio />
+        <Donaciones />
         <Contacto />
       </main>
       <footer className="relative z-10">
