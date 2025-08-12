@@ -44,7 +44,10 @@ export default function Aptitudes() {
       </h2>
       <div className="grid md:grid-cols-2 gap-8">
         {aptitudes.map((apt) => (
-          <div key={apt.titulo} className="flex items-start gap-4 bg-white/5 rounded-xl p-6 mb-2">
+          <div
+            key={apt.titulo}
+            className="flex items-start gap-4 bg-white/5 rounded-xl p-6 mb-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white/10 cursor-pointer"
+          >
             {apt.icon}
             <div>
               <h3 className="text-xl font-semibold text-white mb-1">{apt.titulo}</h3>
