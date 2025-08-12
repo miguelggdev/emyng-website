@@ -17,7 +17,7 @@ export default function PorQuePatrocinarme() {
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {/* Motivos */}
-          <div>
+          <div className="rounded-xl border border-blue-400/30 bg-gradient-to-br from-[#3b82f6]/30 via-[#8b5cf6]/20 to-transparent shadow-lg p-6 flex flex-col">
             <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
               <Star className="text-yellow-400" size={24} />
               Alto impacto mediático
@@ -42,7 +42,7 @@ export default function PorQuePatrocinarme() {
             </ul>
           </div>
           {/* Retornos */}
-          <div>
+          <div className="rounded-xl border border-pink-400/30 bg-gradient-to-br from-[#f472b6]/20 via-[#fde68a]/20 to-transparent shadow-lg p-6 flex flex-col">
             <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
               <HeartHandshake className="text-pink-400" size={24} />
               Retornos de patrocinio
