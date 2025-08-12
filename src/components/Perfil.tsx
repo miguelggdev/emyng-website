@@ -1,8 +1,13 @@
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
+
 export default function Perfil() {
+  const { ref, inView } = useInViewAnimation();
+
   return (
     <section
+      ref={ref}
       id="perfil"
-      className="max-w-5xl mx-auto py-20 px-4 flex flex-col md:flex-row items-center gap-10"
+      className={`max-w-5xl mx-auto py-20 px-4 flex flex-col md:flex-row items-center gap-10 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
       {/* Foto circular */}
       <div className="flex-shrink-0">

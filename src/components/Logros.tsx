@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Trophy, Medal, Star, Flag, Award, Globe } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const banderaColombia = "/images/colombia.png";
 const banderaFrancia = "/images/francia.png";
@@ -98,9 +99,14 @@ const logros = [
 
 export default function Logros() {
   const [open, setOpen] = useState(0);
+  const { ref, inView } = useInViewAnimation();
 
   return (
-    <section id="logros" className="max-w-3xl mx-auto py-20 px-4">
+    <section
+      ref={ref}
+      id="logros"
+      className={`max-w-3xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+    >
       <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-2">
         <Trophy className="text-yellow-400" size={32} />
         Logros Deportivos

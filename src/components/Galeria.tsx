@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Image } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const galleryImages = [
   {
@@ -21,13 +22,18 @@ const galleryImages = [
 
 export default function Galeria() {
   const [current, setCurrent] = useState(0);
+  const { ref, inView } = useInViewAnimation();
 
   const goTo = (idx: number) => setCurrent(idx);
   const prev = () => setCurrent((c) => (c === 0 ? galleryImages.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === galleryImages.length - 1 ? 0 : c + 1));
 
   return (
-    <section id="galeria" className="max-w-3xl mx-auto py-20 px-4">
+    <section
+      ref={ref}
+      id="galeria"
+      className={`max-w-3xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+    >
       <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
         <Image className="text-blue-400" size={32} />
         Galería

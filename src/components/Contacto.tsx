@@ -4,9 +4,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 export default function Contacto() {
   const [loading, setLoading] = useState(false);
+  const { ref, inView } = useInViewAnimation();
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -19,7 +21,11 @@ export default function Contacto() {
   }
 
   return (
-    <section id="contacto" className="max-w-3xl mx-auto py-20 px-4">
+    <section
+      ref={ref}
+      id="contacto"
+      className={`max-w-3xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+    >
       <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
         <Mail className="text-blue-400" size={32} />
         Contacto

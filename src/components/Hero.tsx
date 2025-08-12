@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 export default function Hero() {
+  const { ref, inView } = useInViewAnimation();
+
   return (
     <section
+      ref={ref}
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ background: "black" }}
     >
       {/* Video de fondo */}

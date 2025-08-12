@@ -1,3 +1,5 @@
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
+
 export default function CardsDemo() {
   const cards = [
     {
@@ -20,8 +22,13 @@ export default function CardsDemo() {
     },
   ];
 
+  const { ref, inView } = useInViewAnimation();
+
   return (
-    <section className="max-w-5xl mx-auto py-12 px-4">
+    <section
+      ref={ref}
+      className={`max-w-5xl mx-auto py-12 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+    >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {cards.map((card, idx) => (
           <div

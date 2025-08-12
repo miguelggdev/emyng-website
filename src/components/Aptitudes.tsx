@@ -1,4 +1,5 @@
 import { Repeat, Hourglass, ShieldCheck, ThumbsUp, Target } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const aptitudes = [
   {
@@ -29,8 +30,14 @@ const aptitudes = [
 ];
 
 export default function Aptitudes() {
+  const { ref, inView } = useInViewAnimation();
+
   return (
-    <section id="aptitudes" className="max-w-5xl mx-auto py-20 px-4">
+    <section
+      ref={ref}
+      id="aptitudes"
+      className={`max-w-5xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+    >
       <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
         <Repeat className="text-blue-400" size={32} />
         Aptitudes
