@@ -13,7 +13,6 @@ const logros = [
   {
     titulo: "Distritales",
     icon: <Flag className="text-[#3b82f6]" size={28} />,
-    color: "border-[#3b82f6]",
     foto: fotoDistrital,
     contenido: (
       <ul className="space-y-3 text-white/90 text-base w-full">
@@ -33,7 +32,6 @@ const logros = [
   {
     titulo: "Nacionales",
     icon: <Award className="text-[#8b5cf6]" size={28} />,
-    color: "border-[#8b5cf6]",
     foto: fotoNacional,
     contenido: (
       <ul className="space-y-3 text-white/90 text-base w-full">
@@ -58,7 +56,6 @@ const logros = [
   {
     titulo: "Internacionales",
     icon: <Star className="text-[#a78bfa]" size={28} />,
-    color: "border-[#a78bfa]",
     foto: fotoInternacional,
     contenido: (
       <ul className="space-y-3 text-white/90 text-base w-full">
@@ -111,23 +108,24 @@ export default function Logros() {
         <Trophy className="text-yellow-400" size={32} />
         Logros Deportivos
       </h2>
-      <div className="rounded-lg overflow-hidden shadow-lg">
+      <div className="space-y-6">
         {logros.map((logro, idx) => (
           <div
             key={logro.titulo}
-            className={`border border-t-0 first:rounded-t-lg last:rounded-b-lg bg-white/90 dark:bg-black/80 ${logro.color} ${idx === 0 ? "border-t" : ""}`}
+            className={`rounded-xl bg-white/5 shadow-lg text-white transition-all duration-300 overflow-hidden`}
           >
             <h2>
               <button
-                className={`group relative flex w-full items-center border-0 px-5 py-4 text-left text-base font-semibold transition focus:outline-none ${
+                className={`group flex w-full items-center px-5 py-4 text-left text-lg font-semibold focus:outline-none transition-colors ${
                   open === idx
-                    ? "bg-white text-[#3b82f6] dark:bg-black dark:text-[#a78bfa] shadow"
-                    : "bg-white/80 text-neutral-800 dark:bg-black/70 dark:text-white"
+                    ? "bg-gradient-to-r from-[#3b82f6]/20 via-[#8b5cf6]/20 to-[#a78bfa]/20 text-[#a78bfa]"
+                    : "bg-transparent text-white/90 hover:bg-white/10"
                 }`}
                 aria-expanded={open === idx}
                 aria-controls={`logro-panel-${idx}`}
                 onClick={() => setOpen(open === idx ? -1 : idx)}
                 type="button"
+                style={{ border: "none" }}
               >
                 <span className="flex items-center gap-2">
                   {logro.icon}
@@ -157,9 +155,9 @@ export default function Logros() {
             </h2>
             <div
               id={`logro-panel-${idx}`}
-              className={`transition-all duration-300 overflow-hidden ${
+              className={`transition-all duration-500 overflow-hidden ${
                 open === idx ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
-              } bg-gradient-to-br from-[#3b82f6]/10 via-[#8b5cf6]/10 to-[#a78bfa]/10`}
+              }`}
               aria-labelledby={`logro-header-${idx}`}
             >
               {open === idx && (
@@ -167,7 +165,7 @@ export default function Logros() {
                   <img
                     src={logro.foto}
                     alt={logro.titulo}
-                    className="w-full max-h-72 object-cover rounded-lg border-2 shadow-lg"
+                    className="w-full max-h-72 object-cover rounded-lg border-2 border-white/20 shadow-lg"
                     style={{ objectPosition: "center" }}
                   />
                   {logro.contenido}
