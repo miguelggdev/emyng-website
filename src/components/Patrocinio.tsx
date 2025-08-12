@@ -28,10 +28,10 @@ export default function Patrocinio() {
         Si deseas apoyar mi carrera deportiva y ser parte de mi equipo de patrocinadores, por favor completa el siguiente formulario. ¡Toda ayuda es bienvenida!
       </p>
       <form className="space-y-5" onSubmit={handleSubmit}>
-        <Input name="nombre" placeholder="Nombre o empresa" required className="bg-white/10 text-white" />
-        <Input name="email" type="email" placeholder="Correo electrónico" required className="bg-white/10 text-white" />
-        <Textarea name="mensaje" placeholder="¿Cómo te gustaría apoyar?" required className="bg-white/10 text-white" />
-        <Button type="submit" className="w-full bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#a78bfa] text-white" disabled={loading}>
+        <Input name="nombre" placeholder="Nombre o empresa" required className="bg-white/10 text-white rounded-xl" />
+        <Input name="email" type="email" placeholder="Correo electrónico" required className="bg-white/10 text-white rounded-xl" />
+        <Textarea name="mensaje" placeholder="¿Cómo te gustaría apoyar?" required className="bg-white/10 text-white rounded-xl" />
+        <Button type="submit" className="w-full bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#a78bfa] text-white rounded-xl" disabled={loading}>
           {loading ? "Enviando..." : "Enviar"}
         </Button>
       </form>

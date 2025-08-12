@@ -28,10 +28,10 @@ export default function Contacto() {
         ¿Tienes alguna pregunta, propuesta o mensaje? ¡Escríbeme!
       </p>
       <form className="space-y-5" onSubmit={handleSubmit}>
-        <Input name="nombre" placeholder="Tu nombre" required className="bg-white/10 text-white" />
-        <Input name="email" type="email" placeholder="Tu correo electrónico" required className="bg-white/10 text-white" />
-        <Textarea name="mensaje" placeholder="Escribe tu mensaje aquí" required className="bg-white/10 text-white" />
-        <Button type="submit" className="w-full bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#a78bfa] text-white" disabled={loading}>
+        <Input name="nombre" placeholder="Tu nombre" required className="bg-white/10 text-white rounded-xl" />
+        <Input name="email" type="email" placeholder="Tu correo electrónico" required className="bg-white/10 text-white rounded-xl" />
+        <Textarea name="mensaje" placeholder="Escribe tu mensaje aquí" required className="bg-white/10 text-white rounded-xl" />
+        <Button type="submit" className="w-full bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#a78bfa] text-white rounded-xl" disabled={loading}>
           {loading ? "Enviando..." : "Enviar"}
         </Button>
       </form>
