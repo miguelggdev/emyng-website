@@ -1,21 +1,19 @@
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 import {
   Megaphone,
-  Users,
-  HeartHandshake,
   Star,
-  BadgeCheck,
-  TrendingUp,
   CheckCircle,
+  Globe,
+  Image as ImageIcon,
+  Users,
+  TrendingUp,
   Link2,
   Video,
-  Globe,
-  UserCheck,
   ShoppingBag,
-  Image as ImageIcon,
-  Handshake,
   Heart,
   School,
+  BadgeCheck,
+  HeartHandshake,
 } from "lucide-react";
 
 export default function PorQuePatrocinarme() {
@@ -25,7 +23,7 @@ export default function PorQuePatrocinarme() {
     <section
       ref={ref}
       id="por-que-patrocinarme"
-      className={`max-w-4xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`max-w-6xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
       <div className="bg-white/5 rounded-xl shadow-lg p-8">
         <h2 className="text-3xl font-bold text-white mb-2 flex items-center gap-2">
@@ -36,8 +34,8 @@ export default function PorQuePatrocinarme() {
           <span className="text-yellow-300 text-2xl">🏆</span>
           <span className="font-semibold">BENEFICIOS PARA TU MARCA – ¿QUÉ OBTIENES AL PATROCINARME?</span>
         </p>
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Beneficios de visibilidad y presencia */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Columna 1: Visibilidad & Presencia */}
           <div className="rounded-xl border border-blue-400/30 bg-gradient-to-br from-[#3b82f6]/30 via-[#8b5cf6]/20 to-transparent shadow-lg p-6 flex flex-col">
             <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
               <Star className="text-yellow-400" size={24} />
@@ -47,13 +45,7 @@ export default function PorQuePatrocinarme() {
               <li className="flex items-start gap-3">
                 <CheckCircle className="text-blue-400 mt-1" size={20} />
                 <span>
-                  <span className="font-semibold">Presencia constante:</span> Tu logo en mi licra, casco y accesorios en entrenamientos y competencias nacionales e internacionales.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <TrendingUp className="text-pink-400 mt-1" size={20} />
-                <span>
-                  <span className="font-semibold">Visibilidad digital:</span> Publicaciones semanales en Instagram, TikTok y YouTube usando tu producto, menciones directas y videos de agradecimiento.
+                  <span className="font-semibold">Logo en uniforme:</span> Tu marca en mi licra, casco y accesorios en entrenamientos y competencias nacionales e internacionales.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -63,38 +55,47 @@ export default function PorQuePatrocinarme() {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <ShoppingBag className="text-yellow-400 mt-1" size={20} />
-                <span>
-                  <span className="font-semibold">Impulso a tus ventas:</span> Enlaces directos a tu web, campañas y testimonios reales en emyng.com.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
                 <ImageIcon className="text-purple-400 mt-1" size={20} />
                 <span>
-                  <span className="font-semibold">Activaciones y eventos:</span> Colaboración en campañas, sesiones fotográficas y eventos de tu marca.
+                  <span className="font-semibold">Eventos y activaciones:</span> Participación en campañas, sesiones fotográficas y eventos de tu marca.
                 </span>
               </li>
             </ul>
           </div>
-          {/* Retornos y alianza */}
+          {/* Columna 2: Impulso Digital & Activaciones */}
           <div className="rounded-xl border border-pink-400/30 bg-gradient-to-br from-[#f472b6]/20 via-[#fde68a]/20 to-transparent shadow-lg p-6 flex flex-col">
             <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-              <HeartHandshake className="text-pink-400" size={24} />
-              Retornos & Alianza
+              <TrendingUp className="text-pink-400" size={24} />
+              Impulso Digital & Activaciones
             </h3>
             <ul className="space-y-4 text-white/90 text-base">
               <li className="flex items-start gap-3">
-                <BadgeCheck className="text-blue-400 mt-1" size={20} />
+                <Video className="text-yellow-400 mt-1" size={20} />
                 <span>
-                  <span className="font-semibold">Alianza activa:</span> Participación en campañas, transmisiones en vivo y eventos de tu marca.
+                  <span className="font-semibold">Contenido semanal:</span> Publicaciones en Instagram, TikTok y YouTube usando tu producto, menciones directas y videos de agradecimiento.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Users className="text-green-400 mt-1" size={20} />
+                <Link2 className="text-blue-400 mt-1" size={20} />
                 <span>
-                  <span className="font-semibold">Impacto social:</span> Charlas en colegios y eventos infantiles, llevando tu mensaje y compromiso con el talento joven.
+                  <span className="font-semibold">Enlaces y campañas:</span> Enlaces directos a tu web, promoción de campañas y testimonios reales en emyng.com.
                 </span>
               </li>
+              <li className="flex items-start gap-3">
+                <ShoppingBag className="text-green-400 mt-1" size={20} />
+                <span>
+                  <span className="font-semibold">Impulso a tus ventas:</span> Testimonios y promoción de productos o servicios a una audiencia joven y familiar.
+                </span>
+              </li>
+            </ul>
+          </div>
+          {/* Columna 3: Valores & Alianza Social */}
+          <div className="rounded-xl border border-yellow-400/30 bg-gradient-to-br from-[#fde68a]/20 via-[#a78bfa]/20 to-transparent shadow-lg p-6 flex flex-col">
+            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <HeartHandshake className="text-yellow-400" size={24} />
+              Valores & Alianza Social
+            </h3>
+            <ul className="space-y-4 text-white/90 text-base">
               <li className="flex items-start gap-3">
                 <Heart className="text-pink-400 mt-1" size={20} />
                 <span>
@@ -102,21 +103,21 @@ export default function PorQuePatrocinarme() {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Link2 className="text-purple-400 mt-1" size={20} />
+                <Users className="text-blue-400 mt-1" size={20} />
                 <span>
-                  <span className="font-semibold">Enlace estratégico:</span> Inclusión en mi web como <span className="font-bold">"Aliado estratégico"</span> y mención en redes sociales.
+                  <span className="font-semibold">Impacto social:</span> Charlas en colegios y eventos infantiles, fomentando el deporte y el compromiso con el talento joven.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Video className="text-yellow-400 mt-1" size={20} />
-                <span>
-                  <span className="font-semibold">Videos personalizados:</span> Videos de agradecimiento y testimonios para tu marca.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <School className="text-blue-400 mt-1" size={20} />
+                <School className="text-green-400 mt-1" size={20} />
                 <span>
                   <span className="font-semibold">Presencia en medios:</span> Exposición en medios colombianos y latinos durante competencias.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <BadgeCheck className="text-purple-400 mt-1" size={20} />
+                <span>
+                  <span className="font-semibold">Alianza estratégica:</span> Inclusión en mi web como <span className="font-bold">"Aliado estratégico"</span> y mención en redes sociales.
                 </span>
               </li>
             </ul>
