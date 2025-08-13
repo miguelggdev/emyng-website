@@ -1,5 +1,5 @@
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
-import { Flag } from "lucide-react";
+import { Flag, Users } from "lucide-react";
 
 export default function MiCamino() {
   const { ref, inView } = useInViewAnimation();
@@ -24,9 +24,12 @@ export default function MiCamino() {
         <p className="text-lg text-white/80 leading-relaxed mb-2">
           Para llegar, necesito apoyo. Apoyo en equipo, en equipo técnico, en transporte, en alimentación, en participación en competencias internacionales.
         </p>
-        <p className="text-lg text-white/80 leading-relaxed mt-4">
-          <span className="font-semibold text-blue-300">Hoy te invito a ser parte de esta historia.</span> Porque detrás de cada medalla, hay un equipo. Y quiero que <span className="font-bold text-[#3b82f6]">tú</span> estés en él.
-        </p>
+        <div className="flex flex-col items-center mt-4">
+          <Users className="text-blue-400 mb-2" size={36} />
+          <p className="text-lg text-white/80 leading-relaxed">
+            <span className="font-semibold text-blue-300">Hoy te invito a ser parte de esta historia.</span> Porque detrás de cada medalla, hay un equipo. Y quiero que <span className="font-bold text-[#3b82f6]">tú</span> estés en él.
+          </p>
+        </div>
       </div>
     </section>
   );
