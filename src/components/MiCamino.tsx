@@ -1,5 +1,5 @@
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
-import { Flag, Users } from "lucide-react";
+import { Flag, Users, Medal } from "lucide-react";
 
 export default function MiCamino() {
   const { ref, inView } = useInViewAnimation();
@@ -18,12 +18,15 @@ export default function MiCamino() {
         <p className="text-lg text-white/90 leading-relaxed mb-2">
           Desde los <span className="font-semibold text-blue-300">6 años</span>, el patín no solo ha sido mi pasión, sino mi escuela de vida. Cada vuelta en la pista me enseña disciplina, superación y el valor del esfuerzo. A mis <span className="font-semibold text-blue-300">14 años</span>, ya soy <span className="font-semibold text-yellow-300">campeona panamericana</span> y he competido en <span className="font-semibold text-pink-300">Francia</span> y <span className="font-semibold text-green-300">Portugal</span>, representando a <span className="font-semibold text-yellow-400">Colombia</span> con orgullo.
         </p>
-        <p className="text-lg text-white/90 leading-relaxed mb-2">
-          Pero mi meta es más grande: <span className="font-bold text-[#a78bfa]">ser campeona del mundo</span>.
-        </p>
-        <p className="text-lg text-white/80 leading-relaxed mb-2">
-          Para llegar, necesito apoyo. Apoyo en equipo, en equipo técnico, en transporte, en alimentación, en participación en competencias internacionales.
-        </p>
+        <div className="flex flex-col items-center my-4">
+          <Medal className="text-yellow-400 mb-2" size={36} />
+          <p className="text-lg text-white/90 leading-relaxed mb-2">
+            Pero mi meta es más grande: <span className="font-bold text-[#a78bfa]">ser campeona del mundo</span>.
+          </p>
+          <p className="text-lg text-white/80 leading-relaxed mb-2">
+            Para llegar, necesito apoyo. Apoyo en equipo, en equipo técnico, en transporte, en alimentación, en participación en competencias internacionales.
+          </p>
+        </div>
         <div className="flex flex-col items-center mt-4">
           <Users className="text-blue-400 mb-2" size={36} />
           <p className="text-lg text-white/80 leading-relaxed">
