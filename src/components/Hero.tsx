@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 py-24">
         {/* Foto circular */}
         <img
-          src="/images/20250509_083812.jpg"
+          src="/images/image1emyng.jpeg"
           alt="Emily Nicolle González Muñoz"
           className="w-40 h-40 rounded-full border-4 border-[#a78bfa] shadow-xl object-cover mb-6 object-top"
           style={{ objectPosition: "top center" }}
