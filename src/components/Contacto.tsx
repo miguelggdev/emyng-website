@@ -28,8 +28,7 @@ export default function Contacto() {
     },
   });
 
-  // TODO: Reemplaza esta URL con la de tu formulario de Formspree.
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mgvljyoo";
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
