@@ -10,9 +10,9 @@ export default function CardsDemo() {
       url: "https://www.youtube.com/watch?v=QhsMvF-joyU&list=PL7G5gJVe1k7knMRicd2V5j4sxYSWfzuK1",
     },
     {
-      img: "https://tecdn.b-cdn.net/img/new/standard/nature/187.jpg",
-      title: "Card title 2",
-      text: "Another example text for the second card, showing how content can vary.",
+      img: "/images/software.jpg",
+      title: "Software Patinaje",
+      text: "Usa el software SeepSkate Academy para escuelas, clubes y patinadores.",
       button: "Button 2",
       url: "#",
     },
