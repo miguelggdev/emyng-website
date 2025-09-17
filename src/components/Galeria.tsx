@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Image } from "lucide-react";
+import { Image, ChevronLeft, ChevronRight } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
-import GalleryModal from "@/components/GalleryModal"; // Importar el nuevo componente
 
 const galleryImages = [
   { src: "/images/emilyfr2.jpeg", alt: "Emily en competencia internacional" },
@@ -30,18 +29,8 @@ const galleryImages = [
 ];
 
 export default function Galeria() {
-  const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { ref, inView } = useInViewAnimation();
-
-  const openModal = (index: number) => {
-    setCurrentImageIndex(index);
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
 
   const goToPrev = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -55,46 +44,45 @@ export default function Galeria() {
     );
   };
 
+  const currentImage = galleryImages[currentImageIndex];
+
   return (
     <section
       ref={ref}
       id="galeria"
-      className={`max-w-5xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`max-w-3xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
       <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
         <Image className="text-blue-400" size={32} />
         Galería
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-        {galleryImages.map((img, idx) => (
-          <button
-            key={img.src}
-            onClick={() => openModal(idx)}
-            className="relative w-full h-32 sm:h-40 rounded-lg overflow-hidden group focus:outline-none focus:ring-2 focus:ring-blue-400 transition-transform hover:scale-105"
-            aria-label={`Ver imagen ${img.alt}`}
-            type="button"
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover transition-opacity group-hover:opacity-75"
-            />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <span className="text-white text-sm font-semibold text-center p-2">{img.alt}</span>
-            </div>
-          </button>
-        ))}
+      <div className="relative w-full max-w-xl mx-auto h-80 sm:h-96 rounded-lg overflow-hidden shadow-lg border-2 border-white/20">
+        <img
+          src={currentImage.src}
+          alt={currentImage.alt}
+          className="w-full h-full object-cover"
+        />
+        <button
+          onClick={goToPrev}
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
+          aria-label="Imagen anterior"
+          type="button"
+        >
+          <ChevronLeft size={28} />
+        </button>
+        <button
+          onClick={goToNext}
+          className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
+          aria-label="Imagen siguiente"
+          type="button"
+        >
+          <ChevronRight size={28} />
+        </button>
+        <div className="absolute bottom-4 left-0 right-0 text-center text-white/90 text-sm bg-black/50 py-1 px-2">
+          {currentImage.alt} ({currentImageIndex + 1} de {galleryImages.length})
+        </div>
       </div>
       <p className="text-white/60 text-center mt-6">Recuerdos de mi carrera deportiva y competencias.</p>
-
-      <GalleryModal
-        images={galleryImages}
-        currentIndex={currentImageIndex}
-        isOpen={modalOpen}
-        onClose={closeModal}
-        onPrev={goToPrev}
-        onNext={goToNext}
-      />
     </section>
   );
 }
