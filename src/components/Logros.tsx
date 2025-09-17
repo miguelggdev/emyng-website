@@ -43,7 +43,7 @@ const logros = [
         </li>
         <li className="flex items-center gap-2">
           <Medal className="text-yellow-400" size={20} />
-          Campeona Nacional Categoría Transición 2023 - 2024
+          Campeona Nacional Categoría Transición 2023 - 2024 - 2025
           <img src={banderaColombia} alt="Colombia" className="w-6 h-6 rounded shadow ml-1 inline" />
         </li>
         <li className="flex items-center gap-2">
