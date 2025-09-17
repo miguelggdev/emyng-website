@@ -22,7 +22,7 @@ export default function Perfil() {
       <div className="flex-1">
         <h2 className="text-3xl font-bold text-white mb-4">Sobre Mí</h2>
         <p className="text-lg text-white/90 leading-relaxed">
-          Soy una joven deportista de 13 años que practica el patinaje de velocidad. Mi vida gira en torno a la pista y cada día me despierto con un objetivo claro: ser campeona del mundo. Soy disciplinada en mi deporte y mis estudios. Lucho por mis sueños diariamente y mi familia es mi gran apoyo, están conmigo en las victorias y en los momentos difíciles, recordándome que el esfuerzo y la resiliencia son la clave.
+          Soy una joven deportista de 14 años que practica el patinaje de velocidad. Mi vida gira en torno a la pista y cada día me despierto con un objetivo claro: ser campeona del mundo. Soy disciplinada en mi deporte y mis estudios. Lucho por mis sueños diariamente y mi familia es mi gran apoyo, están conmigo en las victorias y en los momentos difíciles, recordándome que el esfuerzo y la resiliencia son la clave.
         </p>
       </div>
     </section>
