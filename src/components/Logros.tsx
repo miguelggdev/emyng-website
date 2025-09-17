@@ -7,7 +7,7 @@ const banderaFrancia = "/images/francia.png";
 const banderaPortugal = "/images/portugal.png";
 const fotoDistrital = "/images/emynskate.jpeg";
 const fotoNacional = "/images/20250509_083812.jpg";
-const fotoInternacional = "/images/emynskate.jpeg";
+const fotoInternacional = "/images/emilyfr2.jpeg";
 
 const logros = [
   {
