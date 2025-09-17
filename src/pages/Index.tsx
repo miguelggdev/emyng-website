@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Perfil from "@/components/Perfil";
 import MiCamino from "@/components/MiCamino";
 import PorQuePatrocinarme from "@/components/PorQuePatrocinarme";
+import Patrocinadores from "@/components/Patrocinadores";
 import Logros from "@/components/Logros";
 import Valores from "@/components/Valores";
 import Aptitudes from "@/components/Aptitudes";
@@ -26,6 +27,7 @@ export default function Index() {
         <Perfil />
         <MiCamino />
         <PorQuePatrocinarme />
+        <Patrocinadores />
         <Logros />
         <CardsDemo />
         <Valores />

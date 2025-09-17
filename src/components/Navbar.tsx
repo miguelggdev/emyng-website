@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Logros", href: "#logros" },
   { label: "Galería", href: "#galeria" },
   { label: "Valores", href: "#valores" },
+  { label: "Patrocinadores", href: "#patrocinadores" },
   { label: "Patrocinio", href: "#patrocinio" },
   { label: "Contacto", href: "#contacto" },
 ];
