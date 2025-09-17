@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Video de fondo */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src="https://www.w3schools.com/html/mov_bbb.mp4"
+        src="/images/intro.mp4"
         autoPlay
         loop
         muted
