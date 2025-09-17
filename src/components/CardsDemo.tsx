@@ -3,22 +3,25 @@ import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 export default function CardsDemo() {
   const cards = [
     {
-      img: "https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg",
-      title: "Card title 1",
-      text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      button: "Button 1",
+      img: "/images/salida_patinando.jpeg",
+      title: "Aprende a Patinar",
+      text: "Si estás iniciando, mira mis videos en YouTube y sígueme para aprender los mejores trucos y técnicas.",
+      button: "Ver videos",
+      url: "https://www.youtube.com/watch?v=QhsMvF-joyU&list=PL7G5gJVe1k7knMRicd2V5j4sxYSWfzuK1",
     },
     {
       img: "https://tecdn.b-cdn.net/img/new/standard/nature/187.jpg",
       title: "Card title 2",
       text: "Another example text for the second card, showing how content can vary.",
       button: "Button 2",
+      url: "#",
     },
     {
       img: "https://tecdn.b-cdn.net/img/new/standard/nature/188.jpg",
       title: "Card title 3",
       text: "Third card with its own content and a call to action button.",
       button: "Button 3",
+      url: "#",
     },
   ];
 
@@ -41,19 +44,21 @@ export default function CardsDemo() {
                 src={card.img}
                 alt={card.title}
               />
-              <a href="#!">
+              <a href={card.url} target="_blank" rel="noopener noreferrer">
                 <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition duration-300 ease-in-out" />
               </a>
             </div>
             <div className="p-6 flex-1 flex flex-col text-white">
               <h5 className="mb-2 text-xl font-semibold leading-tight">{card.title}</h5>
               <p className="mb-4 text-base text-white/80 flex-1">{card.text}</p>
-              <button
-                type="button"
-                className="inline-block rounded-full bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#a78bfa] px-6 py-2 text-xs font-semibold uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:from-[#2563eb] hover:to-[#a78bfa] focus:outline-none"
+              <a
+                href={card.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#a78bfa] px-6 py-2 text-xs font-semibold uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:from-[#2563eb] hover:to-[#a78bfa] focus:outline-none text-center"
               >
                 {card.button}
-              </button>
+              </a>
             </div>
           </div>
         ))}
