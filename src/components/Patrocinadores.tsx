@@ -5,7 +5,7 @@ const sponsors = [
   {
     name: "OpenSAI",
     icon: <Cpu size={48} className="text-blue-400" />,
-    description: "Organización pionera dedicada a avanzar en la inteligencia artificial a través de la investigación abierta y la colaboración.",
+    description: "Es una iniciativa que promueve el uso de tecnologías libres y de código abierto para impulsar proyectos en educación, cultura y deporte, apoyando la innovación y el desarrollo comunitario.",
     url: "https://opensai.org",
   },
   {
