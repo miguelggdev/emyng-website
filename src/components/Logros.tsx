@@ -48,7 +48,7 @@ const logros = [
         </li>
         <li className="flex items-center gap-2">
           <Globe className="text-[#a78bfa]" size={20} />
-          Campeona Panamericana 2021 - 2023 - 2024
+          Campeona Panamericana 2021 - 2023 - 2024 - 2025
           <img src={banderaColombia} alt="Colombia" className="w-6 h-6 rounded shadow ml-1 inline" />
         </li>
       </ul>
