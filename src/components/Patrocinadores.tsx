@@ -1,5 +1,5 @@
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
-import { HeartHandshake, Link as LinkIcon, Cpu, Code, Bot } from "lucide-react";
+import { HeartHandshake, Link as LinkIcon, Cpu, Code, Handshake } from "lucide-react";
 
 const sponsors = [
   {
@@ -15,10 +15,10 @@ const sponsors = [
     url: "https://arkanatech.tech",
   },
   {
-    name: "Dyad",
-    icon: <Bot size={48} className="text-purple-400" />,
-    description: "Tu asistente de programación IA que te ayuda a crear y modificar aplicaciones web conversando en tiempo real.",
-    url: "https://www.dyad.sh/",
+    name: "Tu empresa Aquí",
+    icon: <Handshake size={48} className="text-yellow-400" />,
+    description: "¡El próximo patrocinador puedes ser tú! Únete a mi equipo y lleva tu marca al podio. Contáctame para explorar cómo podemos crecer juntos.",
+    url: "#patrocinio",
   },
 ];
 
