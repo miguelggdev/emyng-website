@@ -2,7 +2,7 @@ import { Instagram, Youtube, Facebook, Mail } from "lucide-react";
 import { TiktokIcon } from "@/components/icons/TiktokIcon";
 
 const socialLinks = [
-  { icon: Instagram, href: "https://instagram.com/", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/emilynicollegonzalezpatinadora/", label: "Instagram" },
   { icon: Youtube, href: "https://youtube.com/", label: "YouTube" },
   { icon: Facebook, href: "https://facebook.com/", label: "Facebook" },
   { icon: TiktokIcon, href: "https://tiktok.com/", label: "TikTok" },
