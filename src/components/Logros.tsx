@@ -4,7 +4,7 @@ import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const banderaColombia = "/images/colombia.png";
 const banderaFrancia = "/images/flag_france.png";
-const banderaPortugal = "/images/portugal.png";
+const banderaPortugal = "/images/flag_portugal.png";
 const fotoDistrital = "/images/emynskate.jpeg";
 const fotoNacional = "/images/20250509_083812.jpg";
 const fotoInternacional = "/images/emilyfr2.jpeg";
