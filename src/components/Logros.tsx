@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Trophy, Medal, Star, Flag, Award, Globe } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
-const banderaColombia = "/images/colombia.png";
+const banderaColombia = "/images/co.png"; // Usando co.png para Colombia
+const banderaBogota = "/images/bandera-de-Bogota.jpeg"; // Nueva bandera de Bogotá
 const banderaFrancia = "/images/flag_france.png";
 const banderaPortugal = "/images/flag_portugal.png";
 const fotoDistrital = "/images/emynskate.jpeg";
@@ -19,12 +20,12 @@ const logros = [
         <li className="flex items-center gap-2">
           <Medal className="text-yellow-400" size={20} />
           Campeona Distrital Categoría Menores 2021 - 2022 - 2023
-          <img src={banderaColombia} alt="Colombia" className="w-6 h-6 rounded shadow ml-1 inline" />
+          <img src={banderaBogota} alt="Bogotá" className="w-6 h-6 rounded shadow ml-1 inline" />
         </li>
         <li className="flex items-center gap-2">
           <Medal className="text-yellow-400" size={20} />
           Campeona Distrital Categoría Transición 2023 - 2024
-          <img src={banderaColombia} alt="Colombia" className="w-6 h-6 rounded shadow ml-1 inline" />
+          <img src={banderaBogota} alt="Bogotá" className="w-6 h-6 rounded shadow ml-1 inline" />
         </li>
       </ul>
     ),
