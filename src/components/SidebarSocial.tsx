@@ -4,7 +4,7 @@ import { TiktokIcon } from "@/components/icons/TiktokIcon";
 const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/emilynicollegonzalezpatinadora/", label: "Instagram" },
   { icon: Youtube, href: "https://www.youtube.com/@emilynicollegonzalezemyng", label: "YouTube" },
-  { icon: Facebook, href: "https://facebook.com/", label: "Facebook" },
+  { icon: Facebook, href: "https://www.facebook.com/emilynicollegonzalezpatinadoraoficial", label: "Facebook" },
   { icon: TiktokIcon, href: "https://www.tiktok.com/@emyngsports", label: "TikTok" },
   { icon: Mail, href: "mailto:emily@email.com", label: "Email" },
 ];
