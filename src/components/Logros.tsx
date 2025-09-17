@@ -3,7 +3,6 @@ import { Trophy, Medal, Star, Flag, Award, Globe } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const banderaColombia = "/images/colombia.png";
-const banderaFrancia = "/images/francia.png";
 const banderaPortugal = "/images/portugal.png";
 const fotoDistrital = "/images/emynskate.jpeg";
 const fotoNacional = "/images/20250509_083812.jpg";
@@ -60,19 +59,19 @@ const logros = [
     contenido: (
       <ul className="space-y-3 text-white/90 text-base w-full">
         <li className="flex items-center gap-2">
-          <img src={banderaFrancia} alt="Francia" className="w-6 h-6 rounded shadow inline" />
+          <span>🇫🇷</span>
           <span>
             <span className="font-semibold text-yellow-300">4° lugar</span> Clasificación General - Tres Pistas - Francia 2022
           </span>
         </li>
         <li className="flex items-center gap-2">
-          <img src={banderaFrancia} alt="Francia" className="w-6 h-6 rounded shadow inline" />
+          <span>🇫🇷</span>
           <span>
             <span className="font-semibold text-yellow-300">9° lugar</span> Clasificación General - Tres Pistas - Francia 2023
           </span>
         </li>
         <li className="flex items-center gap-2">
-          <img src={banderaFrancia} alt="Francia" className="w-6 h-6 rounded shadow inline" />
+          <span>🇫🇷</span>
           <span>
             <span className="font-semibold text-yellow-300">5° lugar</span> Clasificación General - Tres Pistas - Francia 2024
           </span>
