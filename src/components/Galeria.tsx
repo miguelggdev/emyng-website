@@ -1,95 +1,100 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Image } from "lucide-react";
+import { Image } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
+import GalleryModal from "@/components/GalleryModal"; // Importar el nuevo componente
 
 const galleryImages = [
-  {
-    src: "/images/emilyfr2.jpeg",
-    alt: "Emily en competencia internacional",
-    caption: "Emily en competencia internacional",
-  },
-  {
-    src: "/images/1.jpg",
-    alt: "Competencias 2024 - Patinaje de Velocidad",
-    caption: "Competencias 2024 - Patinaje de Velocidad",
-  },
-  {
-    src: "/images/2.jpg",
-    alt: "Resultados de competencias 2024",
-    caption: "Resultados de competencias 2024",
-  },
+  { src: "/images/emilyfr2.jpeg", alt: "Emily en competencia internacional" },
+  { src: "/images/emynskate.jpeg", alt: "Emily patinando" },
+  { src: "/images/20250509_083812.jpg", alt: "Emily en entrenamiento" },
+  { src: "/images/image1emyng.jpeg", alt: "Emily sonriendo" },
+  { src: "/images/imag1.jpeg", alt: "Emily en la pista" },
+  { src: "/images/imag2.jpeg", alt: "Emily en acción" },
+  { src: "/images/imag3.jpeg", alt: "Emily en carrera" },
+  { src: "/images/imag4.jpeg", alt: "Emily en el podio" },
+  { src: "/images/imag5.jpeg", alt: "Emily con su equipo" },
+  { src: "/images/imag6.jpeg", alt: "Emily celebrando" },
+  { src: "/images/imag7.jpeg", alt: "Emily en un evento" },
+  { src: "/images/imag8.jpeg", alt: "Emily con medalla" },
+  { src: "/images/imag9.jpeg", alt: "Emily en primer plano" },
+  { src: "/images/imag10.jpeg", alt: "Emily en la línea de meta" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.28 AM.jpeg", alt: "Emily en pista" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.36 AM.jpeg", alt: "Emily en competencia" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.39 AM (1).jpeg", alt: "Emily en carrera" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.40 AM (1).jpeg", alt: "Emily en el evento" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.40 AM (2).jpeg", alt: "Emily en el podio" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.42 AM.jpeg", alt: "Emily con su entrenador" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.43 AM.jpeg", alt: "Emily en la salida" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.48 AM.jpeg", alt: "Emily en la meta" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.50 AM (1).jpeg", alt: "Emily con su familia" },
 ];
 
 export default function Galeria() {
-  const [current, setCurrent] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { ref, inView } = useInViewAnimation();
 
-  const goTo = (idx: number) => setCurrent(idx);
-  const prev = () => setCurrent((c) => (c === 0 ? galleryImages.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === galleryImages.length - 1 ? 0 : c + 1));
+  const openModal = (index: number) => {
+    setCurrentImageIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const goToPrev = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <section
       ref={ref}
       id="galeria"
-      className={`max-w-3xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`max-w-5xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
       <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
         <Image className="text-blue-400" size={32} />
         Galería
       </h2>
-      <div className="relative w-full rounded-xl shadow-lg bg-white/10 overflow-hidden" style={{ minHeight: "18rem" }}>
-        {/* Slides */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {galleryImages.map((img, idx) => (
-          <div
+          <button
             key={img.src}
-            className={`transition-opacity duration-700 ease-in-out absolute inset-0 flex flex-col ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"}`}
-            aria-hidden={idx !== current}
-            style={{ minHeight: "18rem" }}
+            onClick={() => openModal(idx)}
+            className="relative w-full h-32 sm:h-40 rounded-lg overflow-hidden group focus:outline-none focus:ring-2 focus:ring-blue-400 transition-transform hover:scale-105"
+            aria-label={`Ver imagen ${img.alt}`}
+            type="button"
           >
             <img
               src={img.src}
               alt={img.alt}
-              className="w-full h-72 sm:h-96 object-cover"
-              style={{ backgroundPosition: "50%" }}
+              className="w-full h-full object-cover transition-opacity group-hover:opacity-75"
             />
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-center text-white z-20">
-              <h5 className="text-lg font-semibold drop-shadow">{img.caption}</h5>
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-white text-sm font-semibold text-center p-2">{img.alt}</span>
             </div>
-          </div>
+          </button>
         ))}
-        {/* Navigation */}
-        <button
-          className="absolute left-0 top-0 bottom-0 flex items-center justify-center w-12 text-white/80 hover:text-white transition z-20"
-          onClick={prev}
-          aria-label="Anterior"
-          type="button"
-        >
-          <ChevronLeft size={32} />
-        </button>
-        <button
-          className="absolute right-0 top-0 bottom-0 flex items-center justify-center w-12 text-white/80 hover:text-white transition z-20"
-          onClick={next}
-          aria-label="Siguiente"
-          type="button"
-        >
-          <ChevronRight size={32} />
-        </button>
-        {/* Indicators */}
-        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-20">
-          {galleryImages.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => goTo(idx)}
-              aria-label={`Ir a la imagen ${idx + 1}`}
-              className={`h-2 w-8 rounded-full transition-all duration-300 ${current === idx ? "bg-white opacity-80" : "bg-white/50 opacity-50"}`}
-              style={{ border: "none" }}
-            />
-          ))}
-        </div>
       </div>
       <p className="text-white/60 text-center mt-6">Recuerdos de mi carrera deportiva y competencias.</p>
+
+      <GalleryModal
+        images={galleryImages}
+        currentIndex={currentImageIndex}
+        isOpen={modalOpen}
+        onClose={closeModal}
+        onPrev={goToPrev}
+        onNext={goToNext}
+      />
     </section>
   );
 }
