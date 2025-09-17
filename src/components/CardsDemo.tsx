@@ -13,7 +13,7 @@ export default function CardsDemo() {
       img: "/images/software.jpg",
       title: "Software Patinaje",
       text: "Usa el software SeepSkate Academy para escuelas, clubes y patinadores.",
-      button: "Button 2",
+      button: "Contactar",
       url: "#",
     },
     {
