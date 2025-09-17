@@ -50,13 +50,13 @@ export default function Galeria() {
     <section
       ref={ref}
       id="galeria"
-      className={`max-w-3xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`max-w-5xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
       <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
         <Image className="text-blue-400" size={32} />
         Galería
       </h2>
-      <div className="relative w-full max-w-xl mx-auto h-80 sm:h-96 rounded-lg overflow-hidden shadow-lg border-2 border-white/20">
+      <div className="relative w-full max-w-3xl mx-auto h-80 sm:h-96 rounded-lg overflow-hidden shadow-lg border-2 border-white/20">
         <img
           src={currentImage.src}
           alt={currentImage.alt}
