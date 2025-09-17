@@ -11,7 +11,7 @@ const sponsors = [
   {
     name: "ArkanaTech",
     icon: <Code size={48} className="text-green-400" />,
-    description: "Especialistas en crear soluciones de software a medida, impulsando la transformación digital con tecnología de vanguardia.",
+    description: "ArkanaTech es una empresa especializada en inteligencia artificial y automatización, dedicada a desarrollar soluciones de software a medida. Su enfoque está en impulsar la transformación digital de las organizaciones mediante el uso de tecnologías de vanguardia, optimizando procesos y potenciando la innovación.",
     url: "https://arkanatech.tech",
   },
   {
