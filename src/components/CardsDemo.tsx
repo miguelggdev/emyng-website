@@ -18,10 +18,10 @@ export default function CardsDemo() {
     },
     {
       img: "https://tecdn.b-cdn.net/img/new/standard/nature/188.jpg",
-      title: "Card title 3",
-      text: "Third card with its own content and a call to action button.",
-      button: "Button 3",
-      url: "#",
+      title: "Perfecciona tu técnica",
+      text: "Si estás interesado en clases personalizadas, puedo ponerte en contacto con los mejores profesores para que mejores tu técnica.",
+      button: "Contactar",
+      url: "#contacto",
     },
   ];
 
