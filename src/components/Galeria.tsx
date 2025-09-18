@@ -9,16 +9,16 @@ const galleryImages = [
   { src: "/images/image1emyng.jpeg", alt: "Emily sonriendo", orientation: "vertical" },
   { src: "/images/imag1.jpeg", alt: "Emily en la pista", orientation: "horizontal" },
   { src: "/images/imag2.jpeg", alt: "Emily en acción", orientation: "horizontal" },
-  { src: "/images/imag3.jpeg", alt: "Emily en carrera", orientation: "vertical" }, // Cambiado a vertical
-  { src: "/images/imag4.jpeg", alt: "Emily en el podio", orientation: "horizontal" },
-  { src: "/images/imag5.jpeg", alt: "Emily con su equipo", orientation: "horizontal" },
+  { src: "/images/imag3.jpeg", alt: "Emily en carrera", orientation: "vertical" },
+  { src: "/images/imag4.jpeg", alt: "Emily en el podio", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "/images/imag5.jpeg", alt: "Emily con su equipo", orientation: "vertical" }, // Ajustado a vertical para object-contain
   { src: "/images/imag6.jpeg", alt: "Emily celebrando", orientation: "horizontal" },
   { src: "/images/imag7.jpeg", alt: "Emily en un evento", orientation: "horizontal" },
-  { src: "/images/imag8.jpeg", alt: "Emily con medalla", orientation: "horizontal" },
+  { src: "/images/imag8.jpeg", alt: "Emily con medalla", orientation: "vertical" }, // Ajustado a vertical para object-contain
   { src: "/images/imag9.jpeg", alt: "Emily en primer plano", orientation: "horizontal" },
-  { src: "/images/imag10.jpeg", alt: "Emily en la línea de meta", orientation: "horizontal" },
-  { src: "/images/imag11.jpeg", alt: "Emily en competencia", orientation: "horizontal" },
-  { src: "/images/imag12.jpeg", alt: "Emily en la pista", orientation: "horizontal" },
+  { src: "/images/imag10.jpeg", alt: "Emily en la línea de meta", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "/images/imag11.jpeg", alt: "Emily en competencia", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "/images/imag12.jpeg", alt: "Emily en la pista", orientation: "vertical" }, // Ajustado a vertical para object-contain
   { src: "/images/imag14.jpeg", alt: "Emily en carrera", orientation: "horizontal" },
   { src: "/images/imag15.jpeg", alt: "Emily en el podio", orientation: "horizontal" },
   { src: "/images/imag16.jpeg", alt: "Emily celebrando", orientation: "horizontal" },
