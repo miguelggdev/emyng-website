@@ -3,29 +3,27 @@ import { Image, ChevronLeft, ChevronRight } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const galleryImages = [
-  { src: "/images/emilyfr2.jpeg", alt: "Emily en competencia internacional" },
-  { src: "/images/emynskate.jpeg", alt: "Emily patinando" },
-  { src: "/images/20250509_083812.jpg", alt: "Emily en entrenamiento" },
-  { src: "/images/image1emyng.jpeg", alt: "Emily sonriendo" },
-  { src: "/images/imag1.jpeg", alt: "Emily en la pista" },
-  { src: "/images/imag2.jpeg", alt: "Emily en acción" },
-  { src: "/images/imag3.jpeg", alt: "Emily en carrera" },
-  { src: "/images/imag4.jpeg", alt: "Emily en el podio" },
-  { src: "/images/imag5.jpeg", alt: "Emily con su equipo" },
-  { src: "/images/imag6.jpeg", alt: "Emily celebrando" },
-  { src: "/images/imag7.jpeg", alt: "Emily en un evento" },
-  { src: "/images/imag8.jpeg", alt: "Emily con medalla" },
-  { src: "/images/imag9.jpeg", alt: "Emily en primer plano" },
-  { src: "/images/imag10.jpeg", alt: "Emily en la línea de meta" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.28 AM.jpeg", alt: "Emily en pista" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.36 AM.jpeg", alt: "Emily en competencia" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.39 AM (1).jpeg", alt: "Emily en carrera" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.40 AM (1).jpeg", alt: "Emily en el evento" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.40 AM (2).jpeg", alt: "Emily en el podio" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.42 AM.jpeg", alt: "Emily con su entrenador" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.43 AM.jpeg", alt: "Emily en la salida" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.48 AM.jpeg", alt: "Emily en la meta" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.50 AM (1).jpeg", alt: "Emily con su familia" },
+  { src: "/images/emilyfr2.jpeg", alt: "Emily en competencia internacional", orientation: "vertical" },
+  { src: "/images/emynskate.jpeg", alt: "Emily patinando", orientation: "vertical" },
+  { src: "/images/20250509_083812.jpg", alt: "Emily en entrenamiento", orientation: "vertical" },
+  { src: "/images/image1emyng.jpeg", alt: "Emily sonriendo", orientation: "vertical" },
+  { src: "/images/imag1.jpeg", alt: "Emily en la pista", orientation: "horizontal" },
+  { src: "/images/imag2.jpeg", alt: "Emily en acción", orientation: "horizontal" },
+  { src: "/images/imag3.jpeg", alt: "Emily en carrera", orientation: "horizontal" },
+  { src: "/images/imag4.jpeg", alt: "Emily en el podio", orientation: "horizontal" },
+  { src: "/images/imag5.jpeg", alt: "Emily con su equipo", orientation: "horizontal" },
+  { src: "/images/imag6.jpeg", alt: "Emily celebrando", orientation: "horizontal" },
+  { src: "/images/imag7.jpeg", alt: "Emily en un evento", orientation: "horizontal" },
+  { src: "/images/imag8.jpeg", alt: "Emily con medalla", orientation: "horizontal" },
+  { src: "/images/imag9.jpeg", alt: "Emily en primer plano", orientation: "horizontal" },
+  { src: "/images/imag10.jpeg", alt: "Emily en la línea de meta", orientation: "horizontal" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.28 AM.jpeg", alt: "Emily en pista", orientation: "horizontal" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.36 AM.jpeg", alt: "Emily en competencia", orientation: "horizontal" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.39 AM (1).jpeg", alt: "Emily en carrera", orientation: "horizontal" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.40 AM (1).jpeg", alt: "Emily en el evento", orientation: "horizontal" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.40 AM (2).jpeg", alt: "Emily en el podio", orientation: "horizontal" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.42 AM.jpeg", alt: "Emily con su entrenador", orientation: "horizontal" },
+  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.50 AM (1).jpeg", alt: "Emily con su familia", orientation: "horizontal" },
 ];
 
 export default function Galeria() {
@@ -56,11 +54,11 @@ export default function Galeria() {
         <Image className="text-blue-400" size={32} />
         Galería
       </h2>
-      <div className="relative w-full max-w-3xl mx-auto h-80 sm:h-96 rounded-lg overflow-hidden shadow-lg border-2 border-white/20">
+      <div className="relative w-full max-w-3xl mx-auto h-80 sm:h-96 rounded-lg overflow-hidden shadow-lg border-2 border-white/20 bg-black">
         <img
           src={currentImage.src}
           alt={currentImage.alt}
-          className="w-full h-full object-cover"
+          className={currentImage.orientation === 'vertical' ? 'w-full h-full object-contain' : 'w-full h-full object-cover'}
         />
         <button
           onClick={goToPrev}
