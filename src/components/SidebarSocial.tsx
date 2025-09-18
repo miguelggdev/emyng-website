@@ -1,12 +1,13 @@
-import { Instagram, Youtube, Facebook, Mail, Whatsapp } from "lucide-react";
+import { Instagram, Youtube, Facebook, Mail } from "lucide-react";
 import { TiktokIcon } from "@/components/icons/TiktokIcon";
+import { WhatsappIcon } from "@/components/icons/WhatsappIcon"; // Importa el icono personalizado
 
 const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/emilynicollegonzalezpatinadora/", label: "Instagram" },
   { icon: Youtube, href: "https://www.youtube.com/@emilynicollegonzalezemyng", label: "YouTube" },
   { icon: Facebook, href: "https://www.facebook.com/emilynicollegonzalezpatinadoraoficial", label: "Facebook" },
   { icon: TiktokIcon, href: "https://www.tiktok.com/@emyngsports", label: "TikTok" },
-  { icon: Whatsapp, href: "https://wa.me/573203614052", label: "WhatsApp" }, // Agregado el botón de WhatsApp
+  { icon: WhatsappIcon, href: "https://wa.me/573203614052", label: "WhatsApp" }, // Usa el icono personalizado
   { icon: Mail, href: "mailto:emily@email.com", label: "Email" },
 ];
 

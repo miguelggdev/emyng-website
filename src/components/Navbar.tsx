@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Menu, X, Instagram, Youtube, Facebook, Mail, Search, Whatsapp } from "lucide-react";
+import { Menu, X, Instagram, Youtube, Facebook, Mail, Search } from "lucide-react";
 import { TiktokIcon } from "@/components/icons/TiktokIcon";
+import { WhatsappIcon } from "@/components/icons/WhatsappIcon"; // Importa el icono personalizado
 import { cn } from "@/lib/utils";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -20,7 +21,7 @@ const socialLinks = [
   { icon: Youtube, href: "https://www.youtube.com/@emilynicollegonzalezemyng", label: "YouTube" },
   { icon: Facebook, href: "https://www.facebook.com/emilynicollegonzalezpatinadoraoficial", label: "Facebook" },
   { icon: TiktokIcon, href: "https://www.tiktok.com/@emyngsports", label: "TikTok" },
-  { icon: Whatsapp, href: "https://wa.me/573203614052", label: "WhatsApp" }, // Agregado el botón de WhatsApp
+  { icon: WhatsappIcon, href: "https://wa.me/573203614052", label: "WhatsApp" }, // Usa el icono personalizado
   { icon: Mail, href: "mailto:emily@email.com", label: "Email" },
 ];
 
