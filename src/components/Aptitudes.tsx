@@ -1,4 +1,4 @@
-import { Repeat, Hourglass, ShieldCheck, ThumbsUp, Target } from "lucide-react";
+import { Repeat, Hourglass, ShieldCheck, ThumbsUp, Target, Zap } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const aptitudes = [
@@ -27,6 +27,11 @@ const aptitudes = [
     titulo: "Disciplina",
     descripcion: "Mantengo el enfoque y la dedicación en cada entrenamiento y meta.",
   },
+  {
+    icon: <Zap className="text-orange-400" size={32} />,
+    titulo: "Determinación",
+    descripcion: "Mi voluntad inquebrantable me impulsa a alcanzar mis objetivos.",
+  },
 ];
 
 export default function Aptitudes() {
@@ -42,7 +47,7 @@ export default function Aptitudes() {
         <Repeat className="text-blue-400" size={32} />
         Aptitudes
       </h2>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {aptitudes.map((apt) => (
           <div
             key={apt.titulo}
