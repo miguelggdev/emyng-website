@@ -6,6 +6,7 @@ import MiCamino from "@/components/MiCamino";
 import PorQuePatrocinarme from "@/components/PorQuePatrocinarme";
 import Patrocinadores from "@/components/Patrocinadores";
 import Logros from "@/components/Logros";
+import LogrosTimeline from "@/components/LogrosTimeline";
 import Valores from "@/components/Valores";
 import Aptitudes from "@/components/Aptitudes";
 import Galeria from "@/components/Galeria";
@@ -29,6 +30,7 @@ export default function Index() {
         <PorQuePatrocinarme />
         <Patrocinadores />
         <Logros />
+        <LogrosTimeline />
         <CardsDemo />
         <Valores />
         <Aptitudes />
