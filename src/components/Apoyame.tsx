@@ -83,10 +83,10 @@ export default function Apoyame() {
         Tu apoyo es fundamental para alcanzar mis metas. Cada contribución, grande o pequeña, me acerca un paso más al podio. ¡Gracias por creer en mi sueño!
       </p>
 
-      <Tabs defaultValue="donaciones" className="w-full">
+      <Tabs defaultValue="patrocinio" className="w-full">
         <TabsList className="grid w-full grid-cols-2 bg-white/10">
-          <TabsTrigger value="donaciones">Donaciones Personales</TabsTrigger>
           <TabsTrigger value="patrocinio">Patrocinio Corporativo</TabsTrigger>
+          <TabsTrigger value="donaciones">Donaciones Personales</TabsTrigger>
         </TabsList>
 
         <TabsContent value="donaciones" className="mt-8">
