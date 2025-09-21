@@ -87,7 +87,7 @@ export default function Patrocinio() {
           <video
             className="rounded-lg shadow-lg w-full max-w-md"
             controls
-            poster="/images/20250509_083812.jpg"
+            poster="/images/image1emyng.jpeg"
             src="https://www.w3schools.com/html/mov_bbb.mp4"
           >
             Tu navegador no soporta el video.
