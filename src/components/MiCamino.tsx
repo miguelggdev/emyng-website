@@ -21,10 +21,11 @@ export default function MiCamino() {
         <div className="flex flex-col items-center my-4">
           <Medal className="text-yellow-400 mb-2" size={36} />
           <p className="text-lg text-white/90 leading-relaxed mb-2">
-            Pero mi meta es más grande: <span className="font-bold text-[#a78bfa]">ser campeona del mundo</span>.
-          </p>
-          <p className="text-lg text-white/80 leading-relaxed mb-2">
-            Para llegar, necesito apoyo. Apoyo en equipo, en equipo técnico, en transporte, en alimentación, en participación en competencias internacionales.
+            Mi meta es clara y ambiciosa: <span className="font-bold text-[#a78bfa]">convertirme en múltiple campeona del mundo.</span>
+            <br /><br />
+            Este sueño requiere más que esfuerzo y disciplina; también necesita apoyo. Los gastos de un deportista de alto rendimiento son elevados: desde implementos de patinaje y ciclismo, equipo técnico, transporte, alimentación y suplementos, hasta fisioterapia, gimnasio, psicología, atención médica especializada y la participación en competencias locales, nacionales e internacionales.
+            <br /><br />
+            <span className="font-semibold text-yellow-300">Con tu ayuda, este sueño puede transformarse en una realidad.</span>
           </p>
         </div>
         <div className="flex flex-col items-center mt-4">
