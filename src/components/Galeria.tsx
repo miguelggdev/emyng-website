@@ -23,7 +23,7 @@ const galleryImages = [
   { src: "/images/imag15.jpeg", alt: "Emily en el podio", orientation: "horizontal" },
   { src: "/images/imag16.jpeg", alt: "Emily celebrando", orientation: "horizontal" },
   { src: "/images/imag17.jpeg", alt: "Emily en un evento", orientation: "horizontal" },
-  { src: "/images/imag18.jpeg", alt: "Emily con medalla", orientation: "horizontal" },
+  { src: "/images/imag18.jpeg", alt: "Emily con medalla", orientation: "vertical" },
   { src: "/images/emyng_guarne.jpeg", alt: "Emily en Guarne", orientation: "horizontal" },
   { src: "/images/salida_patinando.jpeg", alt: "Emily saliendo a patinar", orientation: "horizontal" },
   { src: "/images/WhatsApp Image 2025-09-17 at 10.09.28 AM.jpeg", alt: "Emily en pista", orientation: "horizontal" },
