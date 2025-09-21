@@ -1,4 +1,4 @@
-import { Heart, Users, Target, ShieldCheck } from "lucide-react";
+import { Heart, Users, Target, ShieldCheck, TrendingUp, HeartHandshake } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const valores = [
@@ -21,6 +21,16 @@ const valores = [
     icon: <Users className="text-yellow-400" size={32} />,
     titulo: "Familia",
     descripcion: "Mi familia es mi mayor apoyo y motivación en cada paso.",
+  },
+  {
+    icon: <TrendingUp className="text-teal-400" size={32} />,
+    titulo: "Superación",
+    descripcion: "Busco ser mejor cada día, superando mis propios límites en cada entrenamiento.",
+  },
+  {
+    icon: <HeartHandshake className="text-orange-400" size={32} />,
+    titulo: "Compañerismo",
+    descripcion: "Valoro a mis compañeros y rivales, porque juntos crecemos y hacemos más grande este deporte.",
   },
 ];
 
