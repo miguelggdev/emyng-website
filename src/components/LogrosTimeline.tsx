@@ -5,7 +5,7 @@ const timelineEvents = [
   {
     year: "2025",
     events: [
-      "Campeona Distrital",
+      "Campeona Distrital Cat. Transición",
       "Campeona Nacional Prueba de Puntos",
       "Campeona Panamericana",
     ],
