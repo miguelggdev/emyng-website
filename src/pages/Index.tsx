@@ -12,9 +12,9 @@ import Galeria from "@/components/Galeria";
 import Patrocinio from "@/components/Patrocinio";
 import Contacto from "@/components/Contacto";
 import Donaciones from "@/components/Donaciones";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 import AnimatedGradientBackground from "@/components/AnimatedGradientBackground";
 import CardsDemo from "@/components/CardsDemo";
+import Footer from "@/components/Footer";
 
 export default function Index() {
   return (
@@ -37,9 +37,7 @@ export default function Index() {
         <Donaciones />
         <Contacto />
       </main>
-      <footer className="relative z-10">
-        <MadeWithDyad />
-      </footer>
+      <Footer />
     </div>
   );
 }
