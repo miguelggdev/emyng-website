@@ -4,6 +4,7 @@ import { TiktokIcon } from "@/components/icons/TiktokIcon";
 import { WhatsappIcon } from "@/components/icons/WhatsappIcon"; // Importa el icono personalizado
 import { cn } from "@/lib/utils";
 import ThemeToggle from "@/components/ThemeToggle";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -67,6 +68,9 @@ export default function Navbar() {
             <Search size={20} />
           </button>
           <div className="ml-2">
+            <LanguageSwitcher />
+          </div>
+          <div className="ml-2">
             <ThemeToggle />
           </div>
         </div>
@@ -97,7 +101,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="flex gap-6 mt-4">
+          <div className="flex gap-6 mt-4 items-center">
             {socialLinks.map((s) => (
               <a
                 key={s.label}
@@ -110,6 +114,7 @@ export default function Navbar() {
                 <s.icon size={28} />
               </a>
             ))}
+            <LanguageSwitcher />
             <ThemeToggle />
           </div>
         </div>
