@@ -6,7 +6,7 @@ const timelineEvents = [
     year: "2025",
     events: [
       "Campeona Distrital",
-      "Campeona Nacional",
+      "Campeona Nacional Prueba de Puntos",
       "Campeona Panamericana",
     ],
     icon: <Trophy className="text-yellow-400" />,
