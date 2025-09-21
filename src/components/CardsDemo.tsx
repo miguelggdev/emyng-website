@@ -17,7 +17,7 @@ export default function CardsDemo() {
       url: "#",
     },
     {
-      img: "https://tecdn.b-cdn.net/img/new/standard/nature/188.jpg",
+      img: "/images/emyng_guarne.jpeg",
       title: "Perfecciona tu técnica",
       text: "Si estás interesado en clases personalizadas, puedo ponerte en contacto con los mejores profesores para que mejores tu técnica.",
       button: "Contactar",
