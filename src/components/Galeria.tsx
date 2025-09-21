@@ -80,9 +80,6 @@ export default function Galeria() {
         >
           <ChevronRight size={28} />
         </button>
-        <div className="absolute bottom-4 left-0 right-0 text-center text-white/90 text-sm bg-black/50 py-1 px-2">
-          {currentImage.alt} ({currentImageIndex + 1} de {galleryImages.length})
-        </div>
       </div>
       <p className="text-white/60 text-center mt-6">Recuerdos de mi carrera deportiva y competencias.</p>
     </section>
