@@ -3,6 +3,15 @@ import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const timelineEvents = [
   {
+    year: "2025",
+    events: [
+      "Campeona Distrital",
+      "Campeona Nacional",
+      "Campeona Panamericana",
+    ],
+    icon: <Trophy className="text-yellow-400" />,
+  },
+  {
     year: "2024",
     events: [
       "Campeona Panamericana",
@@ -81,9 +90,6 @@ export default function LogrosTimeline() {
                 <h3 className="text-2xl font-bold text-white">{item.year}</h3>
               </div>
               
-              {/* Punto en la línea */}
-              <div className="absolute left-4 w-4 h-4 bg-purple-400 rounded-full border-4 border-black -translate-x-1/2 mt-3"></div>
-
               <div className="bg-white/5 rounded-xl p-6 shadow-lg ml-10 md:ml-0 transition-all duration-300 hover:shadow-2xl hover:bg-white/10">
                 <ul className="space-y-2 text-white/90">
                   {item.events.map((event, i) => (
