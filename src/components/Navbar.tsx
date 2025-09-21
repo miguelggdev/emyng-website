@@ -12,7 +12,7 @@ const navLinks = [
   { label: "Galería", href: "#galeria" },
   { label: "Valores", href: "#valores" },
   { label: "Patrocinadores", href: "#patrocinadores" },
-  { label: "Patrocinio", href: "#patrocinio" },
+  { label: "Apóyame", href: "#apoyame" },
   { label: "Contacto", href: "#contacto" },
 ];
 

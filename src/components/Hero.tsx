@@ -39,7 +39,7 @@ export default function Hero() {
           Patinadora de Velocidad en Línea | Campeona Panamericana | Representante de Colombia
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#patrocinio">
+          <a href="#apoyame">
             <Button className="bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#a78bfa] text-white text-lg px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform">
               Apóyame
             </Button>

@@ -18,7 +18,7 @@ const sponsors = [
     name: "Tu empresa Aquí",
     icon: <Handshake size={48} className="text-yellow-400" />,
     description: "¡El próximo patrocinador puedes ser tú! Únete a mi equipo y lleva tu marca al podio. Contáctame para explorar cómo podemos crecer juntos.",
-    url: "#patrocinio",
+    url: "#apoyame",
   },
 ];
 

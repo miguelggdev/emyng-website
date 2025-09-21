@@ -10,9 +10,8 @@ import LogrosTimeline from "@/components/LogrosTimeline";
 import Valores from "@/components/Valores";
 import Aptitudes from "@/components/Aptitudes";
 import Galeria from "@/components/Galeria";
-import Patrocinio from "@/components/Patrocinio";
+import Apoyame from "@/components/Apoyame";
 import Contacto from "@/components/Contacto";
-import Donaciones from "@/components/Donaciones";
 import AnimatedGradientBackground from "@/components/AnimatedGradientBackground";
 import CardsDemo from "@/components/CardsDemo";
 import Footer from "@/components/Footer";
@@ -35,8 +34,7 @@ export default function Index() {
         <Valores />
         <Aptitudes />
         <Galeria />
-        <Patrocinio />
-        <Donaciones />
+        <Apoyame />
         <Contacto />
       </main>
       <Footer />
