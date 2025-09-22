@@ -24,11 +24,11 @@ const wishlistItems = [
     description: "Esenciales para tener el mejor agarre y velocidad en campeonatos.",
   },
   {
-    name: "Tiquetes Aéreos al Mundial de Italia",
+    name: "Tiquetes Aéreos y alojamiento Gira Europa 2026",
     icon: <Plane className="text-green-400" />,
     goal: 5000000,
     raised: 1200000,
-    description: "El paso más grande para representar a Colombia en el escenario mundial.",
+    description: "Apoyo para competir en los eventos más importantes del circuito europeo.",
   },
   {
     name: "Casco Aerodinámico Profesional",
