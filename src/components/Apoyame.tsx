@@ -204,7 +204,7 @@ export default function Apoyame() {
               <p className="text-white/80 mb-4">También puedes usar plataformas internacionales:</p>
               <div className="flex justify-center items-center gap-8">
                 <a
-                  href="https://www.paypal.com"
+                  href="https://www.paypal.com/paypalme/emyngmiguel"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center gap-2 text-white/90 hover:text-blue-400 transition-colors"
