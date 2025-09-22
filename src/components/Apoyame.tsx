@@ -27,6 +27,13 @@ const wishlistItems = [
     raised: 900000,
     description: "Seguridad y rendimiento para cortar el viento y ganar segundos valiosos.",
   },
+  {
+    name: "Patines, chasis, rodamientos y separadores Marca Bont",
+    icon: <Gift className="text-pink-400" />,
+    goal: 4000000,
+    raised: 0,
+    description: "Equipamiento completo de alta gama para competir al máximo nivel.",
+  },
 ];
 
 // Datos para el Club de Fans
