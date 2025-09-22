@@ -180,60 +180,60 @@ export default function Apoyame() {
           </TabsContent>
         </Tabs>
 
-        <AlertDialogContent className="bg-black/80 backdrop-blur border-purple-500/50 text-white">
+        <AlertDialogContent className="bg-black/80 backdrop-blur border-purple-500/50 text-white max-h-[90vh] overflow-y-auto">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-2xl font-bold bg-gradient-to-r from-[#8b5cf6] to-[#a78bfa] bg-clip-text text-transparent flex items-center gap-2">
+            <AlertDialogTitle className="text-xl font-bold bg-gradient-to-r from-[#8b5cf6] to-[#a78bfa] bg-clip-text text-transparent flex items-center gap-2">
               <Heart className="text-pink-400" />
               ¡Gracias por tu Apoyo!
             </AlertDialogTitle>
-            <AlertDialogDescription className="text-white/80 pt-2">
+            <AlertDialogDescription className="text-white/80 pt-1">
               Tu contribución es fundamental para alcanzar mis metas. Aquí tienes las formas de hacerla efectiva:
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <div className="flex flex-col items-center gap-4 py-4">
-            <img src="/images/nequiMG.jpeg" alt="Código QR Nequi" className="rounded-lg w-56 h-auto border-2 border-white/20" />
-            <div className="text-center space-y-2">
+          <div className="flex flex-col items-center gap-2 py-2">
+            <img src="/images/nequiMG.jpeg" alt="Código QR Nequi" className="rounded-lg w-48 h-auto border-2 border-white/20" />
+            <div className="text-center space-y-1">
               <p>
                 Puedes escanear el código o enviar tu aporte a:
                 <br />
-                <strong className="text-lg text-purple-300">Nequi/Daviplata: 3203614052</strong>
+                <strong className="text-base text-purple-300">Nequi/Daviplata: 3203614052</strong>
               </p>
             </div>
-            <div className="w-full border-t border-white/20 my-4"></div>
+            <div className="w-full border-t border-white/20 my-2"></div>
             <div className="text-center">
-              <p className="text-white/80 mb-4">También puedes usar plataformas internacionales:</p>
-              <div className="flex justify-center items-center gap-8">
+              <p className="text-white/80 mb-2">También puedes usar plataformas internacionales:</p>
+              <div className="flex justify-center items-center gap-6">
                 <a
                   href="https://www.paypal.com/paypalme/emyngmiguel"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 text-white/90 hover:text-blue-400 transition-colors"
+                  className="flex flex-col items-center gap-1 text-white/90 hover:text-blue-400 transition-colors"
                 >
-                  <PaypalIcon size={40} className="text-blue-400" />
-                  <span>PayPal</span>
+                  <PaypalIcon size={32} className="text-blue-400" />
+                  <span className="text-sm">PayPal</span>
                 </a>
                 <a
                   href="https://wise.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 text-white/90 hover:text-green-400 transition-colors"
+                  className="flex flex-col items-center gap-1 text-white/90 hover:text-green-400 transition-colors"
                 >
-                  <WiseIcon size={40} className="text-green-400" />
-                  <span>Wise</span>
+                  <WiseIcon size={32} className="text-green-400" />
+                  <span className="text-sm">Wise</span>
                 </a>
               </div>
-              <p className="text-xs text-white/60 mt-3">
+              <p className="text-xs text-white/60 mt-2">
                 (Haz clic para ir al sitio. Escríbeme para darte mi usuario de pago).
               </p>
             </div>
-            <div className="w-full border-t border-white/20 my-4"></div>
+            <div className="w-full border-t border-white/20 my-2"></div>
             <a href="#contacto">
-              <Button variant="outline" className="border-white/80 text-white hover:bg-[#3b82f6]/20 hover:border-[#a78bfa] transition-colors">
+              <Button variant="outline" className="border-white/80 text-white hover:bg-[#3b82f6]/20 hover:border-[#a78bfa] transition-colors h-9 px-3">
                 Contactar para otros métodos
               </Button>
             </a>
           </div>
-          <AlertDialogFooter>
+          <AlertDialogFooter className="pt-2">
             <AlertDialogCancel asChild>
               <Button variant="secondary" className="bg-white/10 hover:bg-white/20 text-white">Cerrar</Button>
             </AlertDialogCancel>
