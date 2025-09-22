@@ -13,6 +13,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { PaypalIcon } from "@/components/icons/PaypalIcon";
+import { WiseIcon } from "@/components/icons/WiseIcon";
 
 // Datos para la Lista de Deseos
 const wishlistItems = [
@@ -196,10 +198,35 @@ export default function Apoyame() {
                 <br />
                 <strong className="text-lg text-purple-300">Nequi/Daviplata: 3203614052</strong>
               </p>
-              <p className="text-sm text-white/70">
-                Si prefieres hacer una transferencia a una cuenta de ahorros, escríbeme para enviarte los datos de forma segura.
+            </div>
+            <div className="w-full border-t border-white/20 my-4"></div>
+            <div className="text-center">
+              <p className="text-white/80 mb-4">También puedes usar plataformas internacionales:</p>
+              <div className="flex justify-center items-center gap-8">
+                <a
+                  href="https://www.paypal.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 text-white/90 hover:text-blue-400 transition-colors"
+                >
+                  <PaypalIcon size={40} className="text-blue-400" />
+                  <span>PayPal</span>
+                </a>
+                <a
+                  href="https://wise.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 text-white/90 hover:text-green-400 transition-colors"
+                >
+                  <WiseIcon size={40} className="text-green-400" />
+                  <span>Wise</span>
+                </a>
+              </div>
+              <p className="text-xs text-white/60 mt-3">
+                (Haz clic para ir al sitio. Escríbeme para darte mi usuario de pago).
               </p>
             </div>
+            <div className="w-full border-t border-white/20 my-4"></div>
             <a href="#contacto">
               <Button variant="outline" className="border-white/80 text-white hover:bg-[#3b82f6]/20 hover:border-[#a78bfa] transition-colors">
                 Contactar para otros métodos
