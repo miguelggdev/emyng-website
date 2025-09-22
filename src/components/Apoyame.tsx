@@ -1,170 +1,156 @@
-import { useState } from "react";
-import { Handshake, Heart, CreditCard, Banknote, Send, Globe, MoreHorizontal, ArrowRight } from "lucide-react";
+import { Handshake, Heart, CreditCard, Calendar, Star, Gift, Plane } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
+import { Progress } from "@/components/ui/progress";
 
-const serviciosDonaciones = [
+// Datos para la Lista de Deseos
+const wishlistItems = [
   {
-    nombre: "PayPal",
-    url: "https://www.paypal.com/donate?hosted_button_id=XXXXXXXX",
-    icon: <CreditCard className="text-blue-500" size={28} />,
-    color: "from-blue-400 to-blue-600",
+    name: "Juego de Ruedas de Competencia MPC",
+    icon: <Gift className="text-blue-400" />,
+    goal: 800000,
+    raised: 250000,
+    description: "Esenciales para tener el mejor agarre y velocidad en campeonatos.",
   },
   {
-    nombre: "Nequi",
-    url: "https://www.nequi.com.co/",
-    icon: <Send className="text-pink-500" size={28} />,
-    color: "from-pink-400 to-pink-600",
+    name: "Tiquetes Aéreos al Mundial de Italia",
+    icon: <Plane className="text-green-400" />,
+    goal: 5000000,
+    raised: 1200000,
+    description: "El paso más grande para representar a Colombia en el escenario mundial.",
   },
   {
-    nombre: "Wise",
-    url: "https://wise.com/",
-    icon: <Globe className="text-green-500" size={28} />,
-    color: "from-green-400 to-green-600",
-  },
-  {
-    nombre: "Wire Transfer",
-    url: "#wiretransfer",
-    icon: <Banknote className="text-yellow-500" size={28} />,
-    color: "from-yellow-400 to-yellow-600",
-  },
-  {
-    nombre: "Otros",
-    url: "#otros",
-    icon: <MoreHorizontal className="text-purple-500" size={28} />,
-    color: "from-purple-400 to-purple-600",
+    name: "Casco Aerodinámico Profesional",
+    icon: <Gift className="text-purple-400" />,
+    goal: 1200000,
+    raised: 900000,
+    description: "Seguridad y rendimiento para cortar el viento y ganar segundos valiosos.",
   },
 ];
 
-const donacionesSugeridas = [
-    { monto: "$20.000 COP", descripcion: "Un entrenamiento completo" },
-    { monto: "$50.000 COP", descripcion: "Una rueda de competencia" },
-    { monto: "$100.000 COP", descripcion: "Una competencia nacional" },
-    { monto: "$500.000 COP", descripcion: "Un paso al Mundial" },
+// Datos para el Club de Fans
+const fanClubTiers = [
+  {
+    level: "Bronce",
+    price: "20.000 COP/mes",
+    color: "border-yellow-700",
+    benefits: ["Acceso a newsletter mensual", "Nombre en la web"],
+  },
+  {
+    level: "Plata",
+    price: "50.000 COP/mes",
+    color: "border-gray-400",
+    benefits: ["Beneficios de Bronce", "Video de agradecimiento personal"],
+  },
+  {
+    level: "Oro",
+    price: "100.000 COP/mes",
+    color: "border-yellow-400",
+    benefits: ["Beneficios de Plata", "Acceso a videos exclusivos de entrenamiento"],
+  },
 ];
-
-const serviciosPatrocinio = [
-    { nombre: "PayPal", url: "https://www.paypal.com/donate?hosted_button_id=XXXXXXXX", color: "bg-blue-500 hover:bg-blue-600" },
-    { nombre: "Nequi", url: "https://www.nequi.com.co/", color: "bg-pink-500 hover:bg-pink-600" },
-    { nombre: "Daviplata", url: "https://daviplata.com/", color: "bg-red-500 hover:bg-red-600" },
-    { nombre: "Stripe", url: "https://stripe.com/", color: "bg-purple-500 hover:bg-purple-600" },
-];
-
 
 export default function Apoyame() {
-  const [loading, setLoading] = useState(false);
   const { ref, inView } = useInViewAnimation();
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast.success("¡Gracias por tu interés! Me pondré en contacto pronto.");
-      (e.target as HTMLFormElement).reset();
-    }, 1200);
-  }
 
   return (
     <section
       ref={ref}
       id="apoyame"
-      className={`max-w-3xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`max-w-4xl mx-auto py-20 px-4 transition-all duration-1000 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
     >
-      <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
+      <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-2">
         <Heart className="text-pink-400" size={32} />
-        Apóyame
+        Únete a mi Equipo
       </h2>
-      <p className="text-white/90 mb-8 text-lg">
-        Tu apoyo es fundamental para alcanzar mis metas. Cada contribución, grande o pequeña, me acerca un paso más al podio. ¡Gracias por creer en mi sueño!
+      <p className="text-white/90 mb-10 text-lg">
+        Cada campeón tiene un gran equipo detrás. Tu apoyo, sin importar el tamaño, es el impulso que necesito para alcanzar la meta. Elige la forma que más te guste para ser parte de este sueño.
       </p>
 
-      <Tabs defaultValue="patrocinio" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 bg-white/10">
-          <TabsTrigger value="patrocinio">Patrocinio Corporativo</TabsTrigger>
-          <TabsTrigger value="donaciones">Donaciones Personales</TabsTrigger>
+      <Tabs defaultValue="deseos" className="w-full">
+        <TabsList className="grid w-full grid-cols-3 bg-white/10 h-auto">
+          <TabsTrigger value="deseos" className="py-2">Lista de Deseos</TabsTrigger>
+          <TabsTrigger value="club" className="py-2">Club de Fans</TabsTrigger>
+          <TabsTrigger value="unico" className="py-2">Aporte Único</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="donaciones" className="mt-8">
-            <p className="text-white/90 mb-8 text-lg">
-                Si deseas apoyar mi carrera deportiva, puedes hacerlo a través de cualquiera de los siguientes servicios. ¡Tu ayuda es muy valiosa!
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {serviciosDonaciones.map((servicio) => (
-                <a
-                    key={servicio.nombre}
-                    href={servicio.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-4 bg-white/5 rounded-xl p-5 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-r ${servicio.color} cursor-pointer group`}
-                    aria-label={servicio.nombre}
-                >
-                    <span className="flex-shrink-0">{servicio.icon}</span>
-                    <span className="text-lg font-semibold text-white group-hover:underline">{servicio.nombre}</span>
-                </a>
-                ))}
-            </div>
-            <p className="text-white/60 text-center mt-8 text-sm">
-                ¿Tienes otra forma de donar? <a href="#contacto" className="text-blue-400 underline hover:text-blue-300">Contáctame</a>
-            </p>
+        <TabsContent value="deseos" className="mt-8">
+          <h3 className="text-2xl font-semibold text-white mb-2 text-center">Apoya una Necesidad Específica</h3>
+          <p className="text-white/80 text-center mb-8">
+            Contribuye directamente a un implemento o gasto de mi carrera. ¡Verás el impacto de tu ayuda de inmediato!
+          </p>
+          <div className="grid md:grid-cols-1 gap-6">
+            {wishlistItems.map((item) => (
+              <div key={item.name} className="bg-white/5 rounded-xl p-6 shadow-lg flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0">{item.icon}</div>
+                <div className="flex-1 w-full">
+                  <h4 className="text-xl font-bold text-white">{item.name}</h4>
+                  <p className="text-white/70 mb-3">{item.description}</p>
+                  <Progress value={(item.raised / item.goal) * 100} className="w-full mb-1" />
+                  <div className="flex justify-between text-sm text-white/80">
+                    <span>${item.raised.toLocaleString()}</span>
+                    <span>${item.goal.toLocaleString()}</span>
+                  </div>
+                </div>
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full md:w-auto">Aportar</Button>
+              </div>
+            ))}
+          </div>
         </TabsContent>
 
-        <TabsContent value="patrocinio" className="mt-8">
-            <div className="bg-white/5 rounded-xl shadow-lg p-8 mb-10 flex flex-col items-center text-center">
-                <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Handshake className="text-green-400" size={28} />
-                    Únete a mi equipo
-                </h3>
-                <img
-                    className="rounded-lg shadow-lg w-full max-w-md mb-4"
-                    src="/images/image1emyng.jpeg"
-                    alt="Apoya mi sueño"
-                />
-                <p className="text-white/90 text-lg mb-6">
-                    "Hola, soy Emily. Quiero ser campeona mundial. Necesito tu ayuda para pagar mi próxima competencia en el extranjero. Cualquier aporte, grande o pequeño, me acerca al podio. ¡Gracias!"
-                </p>
-                <div className="flex flex-wrap justify-center gap-4 mb-6">
-                    {serviciosPatrocinio.map((servicio) => (
-                        <a
-                        key={servicio.nombre}
-                        href={servicio.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`px-5 py-2 rounded-full text-white font-semibold transition-colors ${servicio.color} flex items-center gap-2 shadow hover:scale-105`}
-                        >
-                        {servicio.nombre}
-                        <ArrowRight size={18} />
-                        </a>
-                    ))}
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-lg mb-2">
-                    {donacionesSugeridas.map((d) => (
-                        <div
-                        key={d.monto}
-                        className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20"
-                        >
-                        <span className="text-xl font-bold text-[#a78bfa] mb-1">{d.monto}</span>
-                        <span className="text-white/90 text-base">{d.descripcion}</span>
-                        </div>
-                    ))}
-                </div>
-            </div>
+        <TabsContent value="club" className="mt-8">
+          <h3 className="text-2xl font-semibold text-white mb-2 text-center">Conviértete en un Aliado Constante</h3>
+          <p className="text-white/80 text-center mb-8">
+            Tu apoyo mensual me da la estabilidad para enfocarme 100% en mis entrenamientos y competencias.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {fanClubTiers.map((tier) => (
+              <div key={tier.level} className={`bg-white/5 rounded-xl p-6 shadow-lg text-center border-2 ${tier.color} flex flex-col`}>
+                <h4 className="text-2xl font-bold text-white mb-2">{tier.level}</h4>
+                <p className="text-lg font-semibold text-purple-300 mb-4">{tier.price}</p>
+                <ul className="space-y-2 text-white/80 text-left mb-6 flex-1">
+                  {tier.benefits.map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <Star className="text-yellow-400 mt-1 h-4 w-4" />
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button className="bg-purple-500 hover:bg-purple-600 text-white mt-auto">Unirme</Button>
+              </div>
+            ))}
+          </div>
+        </TabsContent>
 
-            <p className="text-white/90 mb-6">
-                Si representas a una marca y deseas explorar una alianza estratégica, por favor completa el siguiente formulario.
-            </p>
-            <form className="space-y-5" onSubmit={handleSubmit}>
-                <Input name="nombre" placeholder="Nombre o empresa" required className="bg-white/10 text-white rounded-xl" />
-                <Input name="email" type="email" placeholder="Correo electrónico" required className="bg-white/10 text-white rounded-xl" />
-                <Textarea name="mensaje" placeholder="¿Cómo te gustaría apoyar?" required className="bg-white/10 text-white rounded-xl" />
-                <Button type="submit" className="w-full bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#a78bfa] text-white rounded-xl" disabled={loading}>
-                {loading ? "Enviando..." : "Enviar"}
-                </Button>
-            </form>
+        <TabsContent value="unico" className="mt-8">
+          <h3 className="text-2xl font-semibold text-white mb-2 text-center">Haz una Donación Directa</h3>
+          <p className="text-white/80 text-center mb-8">
+            Cada aporte suma y me acerca un paso más al podio. ¡Gracias por creer en mí!
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
+              <span className="text-xl font-bold text-[#a78bfa] mb-1">$20.000</span>
+              <span className="text-white/90 text-sm">Un desayuno de campeona</span>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
+              <span className="text-xl font-bold text-[#a78bfa] mb-1">$50.000</span>
+              <span className="text-white/90 text-sm">Un par de ruedas de entreno</span>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
+              <span className="text-xl font-bold text-[#a78bfa] mb-1">$100.000</span>
+              <span className="text-white/90 text-sm">Inscripción a una válida nacional</span>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
+              <span className="text-xl font-bold text-[#a78bfa] mb-1">$500.000</span>
+              <span className="text-white/90 text-sm">Un paso más cerca del Mundial</span>
+            </div>
+          </div>
+          <div className="flex justify-center mt-8">
+            <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-3">
+              Dona por Nequi, PayPal y más
+            </Button>
+          </div>
         </TabsContent>
       </Tabs>
     </section>
