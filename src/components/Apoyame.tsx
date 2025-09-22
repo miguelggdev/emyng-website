@@ -3,6 +3,16 @@ import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 // Datos para la Lista de Deseos
 const wishlistItems = [
@@ -75,91 +85,134 @@ export default function Apoyame() {
         Cada campeón tiene un gran equipo detrás. Tu apoyo, sin importar el tamaño, es el impulso que necesito para alcanzar la meta. Elige la forma que más te guste para ser parte de este sueño.
       </p>
 
-      <Tabs defaultValue="deseos" className="w-full">
-        <TabsList className="grid w-full grid-cols-3 bg-white/10 h-auto">
-          <TabsTrigger value="deseos" className="py-2">Lista de Deseos</TabsTrigger>
-          <TabsTrigger value="club" className="py-2">Club de Fans</TabsTrigger>
-          <TabsTrigger value="unico" className="py-2">Aporte Único</TabsTrigger>
-        </TabsList>
+      <AlertDialog>
+        <Tabs defaultValue="deseos" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 bg-white/10 h-auto">
+            <TabsTrigger value="deseos" className="py-2">Lista de Deseos</TabsTrigger>
+            <TabsTrigger value="club" className="py-2">Club de Fans</TabsTrigger>
+            <TabsTrigger value="unico" className="py-2">Aporte Único</TabsTrigger>
+          </TabsList>
 
-        <TabsContent value="deseos" className="mt-8">
-          <h3 className="text-2xl font-semibold text-white mb-2 text-center">Apoya una Necesidad Específica</h3>
-          <p className="text-white/80 text-center mb-8">
-            Contribuye directamente a un implemento o gasto de mi carrera. ¡Verás el impacto de tu ayuda de inmediato!
-          </p>
-          <div className="grid md:grid-cols-1 gap-6">
-            {wishlistItems.map((item) => (
-              <div key={item.name} className="bg-white/5 rounded-xl p-6 shadow-lg flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-shrink-0">{item.icon}</div>
-                <div className="flex-1 w-full">
-                  <h4 className="text-xl font-bold text-white">{item.name}</h4>
-                  <p className="text-white/70 mb-3">{item.description}</p>
-                  <Progress value={(item.raised / item.goal) * 100} className="w-full mb-1" />
-                  <div className="flex justify-between text-sm text-white/80">
-                    <span>${item.raised.toLocaleString()}</span>
-                    <span>${item.goal.toLocaleString()}</span>
+          <TabsContent value="deseos" className="mt-8">
+            <h3 className="text-2xl font-semibold text-white mb-2 text-center">Apoya una Necesidad Específica</h3>
+            <p className="text-white/80 text-center mb-8">
+              Contribuye directamente a un implemento o gasto de mi carrera. ¡Verás el impacto de tu ayuda de inmediato!
+            </p>
+            <div className="grid md:grid-cols-1 gap-6">
+              {wishlistItems.map((item) => (
+                <div key={item.name} className="bg-white/5 rounded-xl p-6 shadow-lg flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-shrink-0">{item.icon}</div>
+                  <div className="flex-1 w-full">
+                    <h4 className="text-xl font-bold text-white">{item.name}</h4>
+                    <p className="text-white/70 mb-3">{item.description}</p>
+                    <Progress value={(item.raised / item.goal) * 100} className="w-full mb-1" />
+                    <div className="flex justify-between text-sm text-white/80">
+                      <span>${item.raised.toLocaleString()}</span>
+                      <span>${item.goal.toLocaleString()}</span>
+                    </div>
                   </div>
+                  <AlertDialogTrigger asChild>
+                    <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full md:w-auto">Aportar</Button>
+                  </AlertDialogTrigger>
                 </div>
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full md:w-auto">Aportar</Button>
-              </div>
-            ))}
-          </div>
-        </TabsContent>
+              ))}
+            </div>
+          </TabsContent>
 
-        <TabsContent value="club" className="mt-8">
-          <h3 className="text-2xl font-semibold text-white mb-2 text-center">Conviértete en un Aliado Constante</h3>
-          <p className="text-white/80 text-center mb-8">
-            Tu apoyo mensual me da la estabilidad para enfocarme 100% en mis entrenamientos y competencias.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {fanClubTiers.map((tier) => (
-              <div key={tier.level} className={`bg-white/5 rounded-xl p-6 shadow-lg text-center border-2 ${tier.color} flex flex-col`}>
-                <h4 className="text-2xl font-bold text-white mb-2">{tier.level}</h4>
-                <p className="text-lg font-semibold text-purple-300 mb-4">{tier.price}</p>
-                <ul className="space-y-2 text-white/80 text-left mb-6 flex-1">
-                  {tier.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <Star className="text-yellow-400 mt-1 h-4 w-4" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button className="bg-purple-500 hover:bg-purple-600 text-white mt-auto">Unirme</Button>
-              </div>
-            ))}
-          </div>
-        </TabsContent>
+          <TabsContent value="club" className="mt-8">
+            <h3 className="text-2xl font-semibold text-white mb-2 text-center">Conviértete en un Aliado Constante</h3>
+            <p className="text-white/80 text-center mb-8">
+              Tu apoyo mensual me da la estabilidad para enfocarme 100% en mis entrenamientos y competencias.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {fanClubTiers.map((tier) => (
+                <div key={tier.level} className={`bg-white/5 rounded-xl p-6 shadow-lg text-center border-2 ${tier.color} flex flex-col`}>
+                  <h4 className="text-2xl font-bold text-white mb-2">{tier.level}</h4>
+                  <p className="text-lg font-semibold text-purple-300 mb-4">{tier.price}</p>
+                  <ul className="space-y-2 text-white/80 text-left mb-6 flex-1">
+                    {tier.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <Star className="text-yellow-400 mt-1 h-4 w-4" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <AlertDialogTrigger asChild>
+                    <Button className="bg-purple-500 hover:bg-purple-600 text-white mt-auto">Unirme</Button>
+                  </AlertDialogTrigger>
+                </div>
+              ))}
+            </div>
+          </TabsContent>
 
-        <TabsContent value="unico" className="mt-8">
-          <h3 className="text-2xl font-semibold text-white mb-2 text-center">Haz una Donación Directa</h3>
-          <p className="text-white/80 text-center mb-8">
-            Cada aporte suma y me acerca un paso más al podio. ¡Gracias por creer en mí!
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
-              <span className="text-xl font-bold text-[#a78bfa] mb-1">$20.000</span>
-              <span className="text-white/90 text-sm">Un desayuno de campeona</span>
+          <TabsContent value="unico" className="mt-8">
+            <h3 className="text-2xl font-semibold text-white mb-2 text-center">Haz una Donación Directa</h3>
+            <p className="text-white/80 text-center mb-8">
+              Cada aporte suma y me acerca un paso más al podio. ¡Gracias por creer en mí!
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
+                <span className="text-xl font-bold text-[#a78bfa] mb-1">$20.000</span>
+                <span className="text-white/90 text-sm">Un desayuno de campeona</span>
+              </div>
+              <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
+                <span className="text-xl font-bold text-[#a78bfa] mb-1">$50.000</span>
+                <span className="text-white/90 text-sm">Un par de ruedas de entreno</span>
+              </div>
+              <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
+                <span className="text-xl font-bold text-[#a78bfa] mb-1">$100.000</span>
+                <span className="text-white/90 text-sm">Inscripción a una válida nacional</span>
+              </div>
+              <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
+                <span className="text-xl font-bold text-[#a78bfa] mb-1">$500.000</span>
+                <span className="text-white/90 text-sm">Un paso más cerca del Mundial</span>
+              </div>
             </div>
-            <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
-              <span className="text-xl font-bold text-[#a78bfa] mb-1">$50.000</span>
-              <span className="text-white/90 text-sm">Un par de ruedas de entreno</span>
+            <div className="flex justify-center mt-8">
+              <AlertDialogTrigger asChild>
+                <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-3">
+                  Dona por Nequi, PayPal y más
+                </Button>
+              </AlertDialogTrigger>
             </div>
-            <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
-              <span className="text-xl font-bold text-[#a78bfa] mb-1">$100.000</span>
-              <span className="text-white/90 text-sm">Inscripción a una válida nacional</span>
+          </TabsContent>
+        </Tabs>
+
+        <AlertDialogContent className="bg-black/80 backdrop-blur border-purple-500/50 text-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-2xl font-bold bg-gradient-to-r from-[#8b5cf6] to-[#a78bfa] bg-clip-text text-transparent flex items-center gap-2">
+              <Heart className="text-pink-400" />
+              ¡Gracias por tu Apoyo!
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-white/80 pt-2">
+              Tu contribución es fundamental para alcanzar mis metas. Aquí tienes las formas de hacerla efectiva:
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <div className="flex flex-col items-center gap-4 py-4">
+            <img src="/images/nequiMG.jpeg" alt="Código QR Nequi" className="rounded-lg w-56 h-auto border-2 border-white/20" />
+            <div className="text-center space-y-2">
+              <p>
+                Puedes escanear el código o enviar tu aporte a:
+                <br />
+                <strong className="text-lg text-purple-300">Nequi/Daviplata: 3203614052</strong>
+              </p>
+              <p className="text-sm text-white/70">
+                Si prefieres hacer una transferencia a una cuenta de ahorros, escríbeme para enviarte los datos de forma segura.
+              </p>
             </div>
-            <div className="bg-white/10 rounded-lg p-4 flex flex-col items-center shadow transition-all hover:scale-105 hover:bg-white/20 text-center">
-              <span className="text-xl font-bold text-[#a78bfa] mb-1">$500.000</span>
-              <span className="text-white/90 text-sm">Un paso más cerca del Mundial</span>
-            </div>
+            <a href="#contacto">
+              <Button variant="outline" className="border-white/80 text-white hover:bg-[#3b82f6]/20 hover:border-[#a78bfa] transition-colors">
+                Contactar para otros métodos
+              </Button>
+            </a>
           </div>
-          <div className="flex justify-center mt-8">
-            <Button className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-3">
-              Dona por Nequi, PayPal y más
-            </Button>
-          </div>
-        </TabsContent>
-      </Tabs>
+          <AlertDialogFooter>
+            <AlertDialogCancel asChild>
+              <Button variant="secondary" className="bg-white/10 hover:bg-white/20 text-white">Cerrar</Button>
+            </AlertDialogCancel>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </section>
   );
 }
