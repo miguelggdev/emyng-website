@@ -16,7 +16,7 @@ export default function MiCamino() {
           Mi camino
         </h2>
         <p className="text-lg text-white/90 leading-relaxed mb-2">
-          Desde los <span className="font-semibold text-blue-300">6 años</span>, el patín no solo ha sido mi pasión, sino mi escuela de vida. Cada vuelta en la pista me enseña disciplina, superación y el valor del esfuerzo. A mis <span className="font-semibold text-blue-300">14 años</span>, ya soy <span className="font-semibold text-yellow-300">campeona panamericana</span> y he competido en <span className="font-semibold text-pink-300">Francia</span> y <span className="font-semibold text-green-300">Portugal</span>, representando a <span className="font-semibold text-yellow-400">Colombia</span> con orgullo.
+          Desde los <span className="font-semibold text-blue-300">6 años</span>, el patín no solo ha sido mi pasión, sino mi escuela de vida. Cada vuelta en la pista me enseña disciplina, superación y el valor del esfuerzo. A mis <span className="font-semibold text-blue-300">14 años</span>, ya soy <span className="font-semibold text-yellow-300">campeona distrital, nacional, panamericana</span> y he competido en <span className="font-semibold text-pink-300">Francia</span> y <span className="font-semibold text-green-300">Portugal</span>, representando a <span className="font-semibold text-yellow-400">Colombia</span> con orgullo.
         </p>
         <div className="flex flex-col items-center my-4">
           <Medal className="text-yellow-400 mb-2" size={36} />
