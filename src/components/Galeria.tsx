@@ -3,31 +3,31 @@ import { Image, ChevronLeft, ChevronRight } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const galleryImages = [
-  { src: "/images/emilyfr2.jpeg", alt: "Emily en competencia internacional", orientation: "vertical" },
-  { src: "/images/emynskate.jpeg", alt: "Emily patinando", orientation: "vertical" },
-  { src: "/images/20250509_083812.jpg", alt: "Emily en entrenamiento", orientation: "vertical" },
-  { src: "/images/image1emyng.jpeg", alt: "Emily sonriendo", orientation: "vertical" },
-  { src: "/images/imag1.jpeg", alt: "Emily en la pista", orientation: "horizontal" },
-  { src: "/images/imag2.jpeg", alt: "Emily en acción", orientation: "horizontal" },
-  { src: "/images/imag3.jpeg", alt: "Emily en carrera", orientation: "vertical" },
-  { src: "/images/imag4.jpeg", alt: "Emily en el podio", orientation: "vertical" }, // Ajustado a vertical para object-contain
-  { src: "/images/imag5.jpeg", alt: "Emily con su equipo", orientation: "vertical" }, // Ajustado a vertical para object-contain
-  { src: "/images/imag6.jpeg", alt: "Emily celebrando", orientation: "horizontal" },
-  { src: "/images/imag7.jpeg", alt: "Emily en un evento", orientation: "horizontal" },
-  { src: "/images/imag8.jpeg", alt: "Emily con medalla", orientation: "vertical" }, // Ajustado a vertical para object-contain
-  { src: "/images/imag9.jpeg", alt: "Emily en primer plano", orientation: "horizontal" },
-  { src: "/images/imag10.jpeg", alt: "Emily en la línea de meta", orientation: "vertical" }, // Ajustado a vertical para object-contain
-  { src: "/images/imag11.jpeg", alt: "Emily en competencia", orientation: "vertical" }, // Ajustado a vertical para object-contain
-  { src: "/images/imag12.jpeg", alt: "Emily en la pista", orientation: "vertical" }, // Ajustado a vertical para object-contain
-  { src: "/images/imag14.jpeg", alt: "Emily en carrera", orientation: "horizontal" },
-  { src: "/images/imag15.jpeg", alt: "Emily en el podio", orientation: "horizontal" },
-  { src: "/images/imag16.jpeg", alt: "Emily celebrando", orientation: "horizontal" },
-  { src: "/images/imag17.jpeg", alt: "Emily en un evento", orientation: "horizontal" },
-  { src: "/images/imag18.jpeg", alt: "Emily con medalla", orientation: "vertical" },
-  { src: "/images/emyng_guarne.jpeg", alt: "Emily en Guarne", orientation: "horizontal" },
-  { src: "/images/salida_patinando.jpeg", alt: "Emily saliendo a patinar", orientation: "horizontal" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.28 AM.jpeg", alt: "Emily en pista", orientation: "horizontal" },
-  { src: "/images/WhatsApp Image 2025-09-17 at 10.09.50 AM (1).jpeg", alt: "Emily con su familia", orientation: "horizontal" },
+  { src: "images/emilyfr2.jpeg", alt: "Emily en competencia internacional", orientation: "vertical" },
+  { src: "images/emynskate.jpeg", alt: "Emily patinando", orientation: "vertical" },
+  { src: "images/20250509_083812.jpg", alt: "Emily en entrenamiento", orientation: "vertical" },
+  { src: "images/image1emyng.jpeg", alt: "Emily sonriendo", orientation: "vertical" },
+  { src: "images/imag1.jpeg", alt: "Emily en la pista", orientation: "horizontal" },
+  { src: "images/imag2.jpeg", alt: "Emily en acción", orientation: "horizontal" },
+  { src: "images/imag3.jpeg", alt: "Emily en carrera", orientation: "vertical" },
+  { src: "images/imag4.jpeg", alt: "Emily en el podio", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "images/imag5.jpeg", alt: "Emily con su equipo", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "images/imag6.jpeg", alt: "Emily celebrando", orientation: "horizontal" },
+  { src: "images/imag7.jpeg", alt: "Emily en un evento", orientation: "horizontal" },
+  { src: "images/imag8.jpeg", alt: "Emily con medalla", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "images/imag9.jpeg", alt: "Emily en primer plano", orientation: "horizontal" },
+  { src: "images/imag10.jpeg", alt: "Emily en la línea de meta", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "images/imag11.jpeg", alt: "Emily en competencia", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "images/imag12.jpeg", alt: "Emily en la pista", orientation: "vertical" }, // Ajustado a vertical para object-contain
+  { src: "images/imag14.jpeg", alt: "Emily en carrera", orientation: "horizontal" },
+  { src: "images/imag15.jpeg", alt: "Emily en el podio", orientation: "horizontal" },
+  { src: "images/imag16.jpeg", alt: "Emily celebrando", orientation: "horizontal" },
+  { src: "images/imag17.jpeg", alt: "Emily en un evento", orientation: "horizontal" },
+  { src: "images/imag18.jpeg", alt: "Emily con medalla", orientation: "vertical" },
+  { src: "images/emyng_guarne.jpeg", alt: "Emily en Guarne", orientation: "horizontal" },
+  { src: "images/salida_patinando.jpeg", alt: "Emily saliendo a patinar", orientation: "horizontal" },
+  { src: "images/WhatsApp Image 2025-09-17 at 10.09.28 AM.jpeg", alt: "Emily en pista", orientation: "horizontal" },
+  { src: "images/WhatsApp Image 2025-09-17 at 10.09.50 AM (1).jpeg", alt: "Emily con su familia", orientation: "horizontal" },
 ];
 
 export default function Galeria() {

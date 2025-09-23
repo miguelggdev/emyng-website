@@ -14,12 +14,12 @@ export default function Hero() {
       {/* Video de fondo */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src="/images/intro.mp4"
+        src="images/intro.mp4"
         autoPlay
         loop
         muted
         playsInline
-        poster="/placeholder.svg"
+        poster="placeholder.svg"
       />
       {/* Overlay degradado */}
       <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#3b82f6]/80 via-[#8b5cf6]/70 to-black/90" />
@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 py-24">
         {/* Foto circular */}
         <img
-          src="/images/image1emyng.jpeg"
+          src="images/image1emyng.jpeg"
           alt="Emily Nicolle González Muñoz"
           className="w-40 h-40 rounded-full border-4 border-[#a78bfa] shadow-xl object-cover mb-6 object-top"
           style={{ objectPosition: "top center" }}

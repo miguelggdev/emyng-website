@@ -3,21 +3,21 @@ import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 export default function CardsDemo() {
   const cards = [
     {
-      img: "/images/salida_patinando.jpeg",
+      img: "images/salida_patinando.jpeg",
       title: "Aprende a Patinar",
       text: "Si estás iniciando, mira mis videos en YouTube y sígueme para aprender los mejores trucos y técnicas.",
       button: "Ver videos",
       url: "https://www.youtube.com/watch?v=QhsMvF-joyU&list=PL7G5gJVe1k7knMRicd2V5j4sxYSWfzuK1",
     },
     {
-      img: "/images/software.jpg",
+      img: "images/software.jpg",
       title: "Software Patinaje",
       text: "Usa el software SeepSkate Academy para escuelas, clubes y patinadores.",
       button: "Contactar",
       url: "#",
     },
     {
-      img: "/images/emyng_guarne.jpeg",
+      img: "images/emyng_guarne.jpeg",
       title: "Perfecciona tu técnica",
       text: "Si estás interesado en clases personalizadas, puedo ponerte en contacto con los mejores profesores para que mejores tu técnica.",
       button: "Contactar",

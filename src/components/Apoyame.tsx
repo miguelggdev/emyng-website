@@ -191,7 +191,7 @@ export default function Apoyame() {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <div className="flex flex-col items-center gap-2 py-2">
-            <img src="/images/nequiMG.jpeg" alt="Código QR Nequi" className="rounded-lg w-48 h-auto border-2 border-white/20" />
+            <img src="images/nequiMG.jpeg" alt="Código QR Nequi" className="rounded-lg w-48 h-auto border-2 border-white/20" />
             <div className="text-center space-y-1">
               <p>
                 Puedes escanear el código o enviar tu aporte a:
