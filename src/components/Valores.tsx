@@ -25,7 +25,7 @@ const valores = [
   {
     icon: <TrendingUp className="text-teal-400" size={32} />,
     titulo: "Superación",
-    descripcion: "Busco ser mejor cada día, superando mis propios límites en cada entrenamiento.",
+    descripcion: "Busco ser mejor cada día, superando mis propios límites en cada entrenamiento y competencia.",
   },
   {
     icon: <HeartHandshake className="text-orange-400" size={32} />,
